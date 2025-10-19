@@ -9,27 +9,131 @@
     <meta name="generator" content="GrapesJS Studio">
     <link rel="icon" href="https://app.grapesjs.com/api/assets/random-image?query=%22minimal%20monogram%20logo%20P%20camera%22&amp;w=64&amp;h=64" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
   </head>
 
   <body class="gjs-t-body body-root" id="iozi">
     <div class="background-overlay" id="i4zbp"></div>
     <div class="background-image-holder" id="i9kxo"></div>
-    <header class="header-navigation" id="i6k02">
-      <div class="header-container" id="il3xh">
-        <div class="brand-area" id="i3xdw">
-          <span class="gjs-t-h2 brand-name" id="i6e0f">Penncamm</span>
+    <header id="i6k02" class="header-navigation">
+      <div id="il3xh" class="header-container">
+        <div id="i3xdw" class="brand-area">
+          <span id="i6e0f" class="gjs-t-h2 brand-name">Penncamm</span>
         </div>
-        <nav class="primary-navigation" id="i0xvj">
-          <a href="#home" id="nav-home" class="nav-button-home">Home</a>
+        <nav id="i0xvj" aria-label="Primary" class="primary-navigation">
+          <a href="#home" id="nav-home" aria-current="page" class="nav-button-home">Home</a>
           <a href="#gallery" id="nav-gallery" class="nav-button-gallery">Gallery</a>
           <a href="#features" id="nav-features" class="nav-button-features">Features</a>
           <a href="#buy" id="nav-buy" class="nav-button-buy-now">Buy Now</a>
         </nav>
-        <div class="header-logo" id="iw0no">
-          <img src="https://app.grapesjs.com/api/assets/random-image?query=%22minimal%20monogram%20logo%20P%20camera%22&amp;w=36&amp;h=36" alt="Penncamm Logo" loading="eager" width="36" height="36" class="logo-image" id="i9wzq" />
+        <div id="iw0no" aria-hidden="true" class="header-logo">
+          <img src="https://api.iconify.design/mdi:camera-iris.svg?color=currentColor&amp;width=36&amp;height=36" alt="Penncamm camera logo" id="ilrgbh" />
         </div>
       </div>
+      <script id="ikshc2">
+        (function() {
+          var header = document.getElementById('i6k02');
+          if (!header) return;
+
+          var links = {
+            home: header.querySelector('#nav-home'),
+            gallery: header.querySelector('#nav-gallery'),
+            features: header.querySelector('#nav-features'),
+            buy: header.querySelector('#nav-buy')
+          };
+
+          var map = [{
+              id: 'home',
+              link: links.home,
+              tab: 'home'
+            },
+            {
+              id: 'gallery',
+              link: links.gallery,
+              tab: 'gallery'
+            },
+            {
+              id: 'features',
+              link: links.features,
+              tab: 'features'
+            },
+            {
+              id: 'manufacturing',
+              link: links.features,
+              tab: 'features'
+            },
+            {
+              id: 'about',
+              link: links.features,
+              tab: 'features'
+            },
+            {
+              id: 'buy',
+              link: links.buy,
+              tab: 'buy'
+            },
+            {
+              id: 'legal',
+              link: links.buy,
+              tab: 'buy'
+            }
+          ].map(function(s) {
+            s.el = document.getElementById(s.id);
+            return s;
+          }).filter(function(s) {
+            return !!s.el;
+          });
+
+          function clearActive() {
+            Object.values(links).forEach(function(a) {
+              if (!a) return;
+              a.classList.remove('is-active');
+              a.removeAttribute('aria-current');
+            });
+          }
+
+          function setActive(linkEl) {
+            if (!linkEl) return;
+            clearActive();
+            linkEl.classList.add('is-active');
+            linkEl.setAttribute('aria-current', 'page');
+          }
+
+          // Observe sections to toggle active state
+          var observer;
+          if ('IntersectionObserver' in window) {
+            observer = new IntersectionObserver(function(entries) {
+              entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                  var sec = map.find(function(s) {
+                    return s.el === entry.target;
+                  });
+                  if (sec) setActive(sec.link);
+                }
+              });
+            }, {
+              root: null,
+              rootMargin: '0px 0px -60% 0px',
+              threshold: 0.2
+            });
+
+            map.forEach(function(s) {
+              observer.observe(s.el);
+            });
+          }
+
+          // Immediate highlight on click
+          Object.values(links).forEach(function(a) {
+            if (!a) return;
+            a.addEventListener('click', function() {
+              setActive(a);
+            });
+          });
+
+          // Initial state (on load)
+          setActive(links.home);
+        })();
+      </script>
     </header>
     <main class="main-content" id="ifvte">
       <section id="home" class="home-section">
