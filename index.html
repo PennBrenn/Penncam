@@ -2,827 +2,643 @@
 <html lang="en">
 
   <head>
-    <title>Penncamm MK1 — Minimalist Dark Homepage</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Penncamm — Minimalistic Homepage</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="index,follow">
     <meta name="generator" content="GrapesJS Studio">
-    <link rel="icon" href="https://app.grapesjs.com/api/assets/random-image?query=%22minimal%20monogram%20logo%20P%20camera%22&amp;w=64&amp;h=64" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="icon" type="image/png" href="https://app.grapesjs.com/api/assets/random-image?query=%22minimal%20monogram%20logo%20letter%20P%22&amp;w=64&amp;h=64" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet" />
+    <script> </script>
   </head>
 
-  <body class="gjs-t-body body-root" id="iozi">
-    <div class="background-overlay" id="i4zbp"></div>
-    <div class="background-image-holder" id="i9kxo"></div>
-    <header id="i6k02" class="header-navigation">
-      <div id="il3xh" class="header-container">
-        <div id="i3xdw" class="brand-area">
-          <span id="i6e0f" class="gjs-t-h2 brand-name">Penncamm</span>
-        </div>
-        <nav id="i0xvj" aria-label="Primary" class="primary-navigation">
-          <a href="#home" id="nav-home" aria-current="page" class="nav-button-home">Home</a>
-          <a href="#gallery" id="nav-gallery" class="nav-button-gallery">Gallery</a>
-          <a href="#features" id="nav-features" class="nav-button-features">Features</a>
-          <a href="#buy" id="nav-buy" class="nav-button-buy-now">Buy Now</a>
-        </nav>
-        <div id="iw0no" aria-hidden="true" class="header-logo">
-          <img src="https://api.iconify.design/mdi:camera-iris.svg?color=currentColor&amp;width=36&amp;height=36" alt="Penncamm camera logo" id="ilrgbh" />
-        </div>
-      </div>
-      <script id="ikshc2">
-        (function() {
-          var header = document.getElementById('i6k02');
-          if (!header) return;
-
-          var links = {
-            home: header.querySelector('#nav-home'),
-            gallery: header.querySelector('#nav-gallery'),
-            features: header.querySelector('#nav-features'),
-            buy: header.querySelector('#nav-buy')
-          };
-
-          var map = [{
-              id: 'home',
-              link: links.home,
-              tab: 'home'
-            },
-            {
-              id: 'gallery',
-              link: links.gallery,
-              tab: 'gallery'
-            },
-            {
-              id: 'features',
-              link: links.features,
-              tab: 'features'
-            },
-            {
-              id: 'manufacturing',
-              link: links.features,
-              tab: 'features'
-            },
-            {
-              id: 'about',
-              link: links.features,
-              tab: 'features'
-            },
-            {
-              id: 'buy',
-              link: links.buy,
-              tab: 'buy'
-            },
-            {
-              id: 'legal',
-              link: links.buy,
-              tab: 'buy'
-            }
-          ].map(function(s) {
-            s.el = document.getElementById(s.id);
-            return s;
-          }).filter(function(s) {
-            return !!s.el;
-          });
-
-          function clearActive() {
-            Object.values(links).forEach(function(a) {
-              if (!a) return;
-              a.classList.remove('is-active');
-              a.removeAttribute('aria-current');
-            });
-          }
-
-          function setActive(linkEl) {
-            if (!linkEl) return;
-            clearActive();
-            linkEl.classList.add('is-active');
-            linkEl.setAttribute('aria-current', 'page');
-          }
-
-          // Observe sections to toggle active state
-          var observer;
-          if ('IntersectionObserver' in window) {
-            observer = new IntersectionObserver(function(entries) {
-              entries.forEach(function(entry) {
-                if (entry.isIntersecting) {
-                  var sec = map.find(function(s) {
-                    return s.el === entry.target;
-                  });
-                  if (sec) setActive(sec.link);
-                }
-              });
-            }, {
-              root: null,
-              rootMargin: '0px 0px -60% 0px',
-              threshold: 0.2
-            });
-
-            map.forEach(function(s) {
-              observer.observe(s.el);
-            });
-          }
-
-          // Immediate highlight on click
-          Object.values(links).forEach(function(a) {
-            if (!a) return;
-            a.addEventListener('click', function() {
-              setActive(a);
-            });
-          });
-
-          // Initial state (on load)
-          setActive(links.home);
-        })();
-      </script>
-    </header>
-    <main class="main-content" id="ifvte">
-      <section id="home" class="home-section">
-        <h1 class="gjs-t-h1 home-title" id="imery">Penncamm MK1</h1>
-        <div class="hero-image-wrapper" id="i5joh">
-          <img src="https://app.grapesjs.com/api/assets/random-image?query=%22minimal%20camera%20product%20shot%22&amp;w=1200&amp;h=700" alt="Penncamm MK1 Camera" loading="eager" width="1200" height="700" class="hero-camera-image" id="ii5ky" />
-        </div>
-        <div class="typewriter-wrapper" id="imrqv">
-          <p class="typewriter-line" id="i512f">
-            <span id="typewriter"></span>
-          </p>
-        </div>
-        <p class="home-subtitle" id="ifhwg">This camera is made for you, innovating the future</p>
-      </section>
-      <section id="gallery" class="gallery-section">
-        <div class="gjs-t-border gallery-bubble" id="iwmjr">
-          <h2 class="gjs-t-h2 gallery-title" id="iu02b">Gallery</h2>
-          <div class="gallery-grid" id="if96f">
-            <figure class="gallery-item" id="i6ddu">
-              <img src="https://app.grapesjs.com/api/assets/random-image?query=%22city%20night%20photography%22&amp;w=400&amp;h=300" alt="Night city sample" loading="lazy" width="400" height="300" class="gallery-image" id="ik1lv" />
-              <figcaption class="gallery-caption" id="ihosk">Downtown at night — 1/60s, ISO 800, New York</figcaption>
-            </figure>
-            <figure class="gallery-item" id="ihlw7">
-              <img src="https://app.grapesjs.com/api/assets/random-image?query=%22forest%20morning%20mist%20photography%22&amp;w=400&amp;h=300" alt="Forest morning sample" loading="lazy" width="400" height="300" class="gallery-image" id="ig5en" />
-              <figcaption class="gallery-caption" id="i3ezo">Morning mist — 1/125s, ISO 200, Oregon</figcaption>
-            </figure>
-            <figure class="gallery-item" id="i1vzi">
-              <img src="https://app.grapesjs.com/api/assets/random-image?query=%22street%20portrait%20monochrome%22&amp;w=400&amp;h=300" alt="Street portrait sample" loading="lazy" width="400" height="300" class="gallery-image" id="idnjn" />
-              <figcaption class="gallery-caption" id="ij7dd">Street portrait — 1/250s, ISO 400, Tokyo</figcaption>
-            </figure>
+  <body class="gjs-t-body body-root">
+    <div class="backdrop-overlay" id="ieoim">
+      <header id="i5y2j" class="header-wrapper">
+        <div id="i8hd6" class="header-container">
+          <div id="ipftz" class="header-brand-group">
+            <span id="i3khz" class="gjs-t-h2 header-brand-title">Penncamm</span>
+          </div>
+          <nav id="if9jp" class="primary-navigation">
+            <a href="#home" id="ij1g7" class="gjs-t-link nav-link-home">Home</a>
+            <a href="#gallery" id="i9cpt" class="gjs-t-link nav-link-gallery">Gallery</a>
+            <a href="#features" id="il5yh" class="gjs-t-link nav-link-features">Features</a>
+            <a href="#buy" id="icf87" class="gjs-t-link nav-link-buy-now">Buy Now</a>
+          </nav>
+          <div id="ivugh" class="header-logo-group">
+            <img alt="Penncamm Logo" loading="lazy" width="36" height="36" src="https://app.grapesjs.com/api/assets/random-image?query=%22minimal%20monogram%20logo%20letter%20P%22&amp;w=72&amp;h=72" id="idwri" class="header-logo-image" />
           </div>
         </div>
-      </section>
-      <section id="features" class="features-section-wrapper">
-        <div class="gjs-t-border build-bubble" id="i58hy">
-          <h2 class="gjs-t-h2 build-title" id="ixcoh">Build</h2>
-          <ul class="build-feature-list" id="ilygh">
-            <li class="build-feature-item" id="igu01">
-              <p class="build-feature-name" id="iao7s">CNC-milled frame</p>
-              <small class="build-feature-desc" id="i2dga">Precision-cut chassis for rigidity and durability.</small>
-            </li>
-            <li class="build-feature-item" id="iyh0f">
-              <p class="build-feature-name" id="ihlk1">Weather sealing</p>
-              <small class="build-feature-desc" id="invca">Gasketed joins to resist dust and light rain.</small>
-            </li>
-            <li class="build-feature-item" id="i4wuj">
-              <p class="build-feature-name" id="ib6ph">Ergonomic grip</p>
-              <small class="build-feature-desc" id="ie9gj">Balanced handling for long shoots.</small>
-            </li>
-            <li class="build-feature-item" id="ie5ol">
-              <p class="build-feature-name" id="i6w0p">Modular covers</p>
-              <small class="build-feature-desc" id="ite7m">Swap wrap, case, and accents without tools.</small>
-            </li>
-          </ul>
-        </div>
-        <div class="gjs-t-border technology-bubble" id="ie3gb">
-          <h2 class="gjs-t-h2 technology-title" id="ixn9t">Technology</h2>
-          <ul class="technology-feature-list" id="i2bya">
-            <li class="technology-feature-item" id="iq6x2">
-              <p class="technology-feature-name" id="ijogi">GEN2 imaging</p>
-              <small class="technology-feature-desc" id="ifeak">Cleaner low light and richer tones.</small>
-            </li>
-            <li class="technology-feature-item" id="iu3h9">
-              <p class="technology-feature-name" id="ik84p">Smart metering</p>
-              <small class="technology-feature-desc" id="iayqo">Adaptive exposure with scene detection.</small>
-            </li>
-            <li class="technology-feature-item" id="igvco">
-              <p class="technology-feature-name" id="imb3l">Fast storage</p>
-              <small class="technology-feature-desc" id="ipjqmu">Class 10 ready for bursts and video.</small>
-            </li>
-            <li class="technology-feature-item" id="isrn86">
-              <p class="technology-feature-name" id="irq7co">Open firmware</p>
-              <small class="technology-feature-desc" id="izg5ao">Customizable features and updates.</small>
-            </li>
-          </ul>
-        </div>
-        <div id="manufacturing" class="gjs-t-border manufacturing-bubble">
-          <h2 class="gjs-t-h2 manufacturing-title" id="iuw1qk">Manufacturing</h2>
-          <p class="manufacturing-description" id="i9mmkt">
-            Each Penncamm MK1 is handmade, making every unit uniquely yours. We use eco‑friendly materials and real leather parts for the wrap, paired with durable metals and recyclable plastics. Craft is at the core—fitting, finishing, and testing are all done by hand.
-          </p>
-        </div>
-        <div id="about" class="gjs-t-border about-me-bubble">
-          <h2 class="gjs-t-h2 about-me-title" id="iv3v5n">About me</h2>
-          <p class="about-me-description" id="i44bg7">
-            I build cameras that prioritize simplicity in use and complexity in capability. Penncamm started as a workshop project and became a commitment to thoughtful, sustainable craft.
-          </p>
-          <a href="#buy" class="gjs-t-button about-me-button" id="ie3563">Learn more</a>
-        </div>
-      </section>
-      <section id="buy" class="buy-now-section">
-        <div class="gjs-t-border buy-now-bubble" id="ighf2e">
-          <div class="buy-now-header" id="i2fmxo">
-            <div class="buy-now-title-group" id="iodur3">
-              <h2 class="gjs-t-h2 buy-now-title" id="itff74">Buy now</h2>
-              <small class="lead-time-text" id="i3ipai">Penncamm — Lead time: 0–14 days — Current Generation: GEN2</small>
-            </div>
-            <div class="base-cost-display" id="i23qnl">
-              <p class="base-costs" id="i88cvz">Base: $30 parts + $50 labor</p>
-              <p id="totalPrice" class="total-price">Total: $80</p>
-            </div>
+      </header>
+      <main class="main-content" id="i6zhc">
+        <section id="home" class="section-home">
+          <div class="home-container" id="i960w">
+            <h1 class="gjs-t-h1" id="iwasv">Penncamm MK1</h1>
+            <figure class="home-figure-camera" id="iuqe1">
+              <img alt="Penncamm MK1 Camera" loading="lazy" width="1024" height="640" src="https://app.grapesjs.com/api/assets/random-image?query=%22camera%20product%20on%20dark%20background%22&amp;w=1200&amp;h=750" class="home-camera-image" id="ir1pq" />
+              <figcaption class="home-figure-caption" id="iwa2j">Sample product image (replace with your own)</figcaption>
+            </figure>
+            <p class="home-typewriter-text" id="icioq">
+              <span id="typewriter"></span>
+              <span class="home-typewriter-cursor" id="io1ih">|</span>
+            </p>
+            <p class="home-subtitle-description" id="iwosk">This camera is made for you, innovating the future</p>
           </div>
-          <form method="get" id="configForm" class="configurator-form">
-            <fieldset class="wrap-fieldset" id="iuiz8k">
-              <legend class="wrap-legend" id="i81oe1">Wrap</legend>
-              <div class="wrap-options" id="i98qtw">
-                <label class="wrap-option" id="itizmv">
-                  <input type="radio" name="wrap" value="Real Leather: Tan" checked class="wrap-radio-tan" id="ilpy3j" />
-                  <span id="itgr8g">Real Leather: Tan +2</span>
-                </label>
-                <label class="wrap-option" id="i5a1qe">
-                  <input type="radio" name="wrap" value="Real Leather: Brown" class="wrap-radio-brown" id="ienz3u" />
-                  <span id="irz2z8">Real Leather: Brown +2</span>
-                </label>
-                <label class="wrap-option" id="iqyya1">
-                  <input type="radio" name="wrap" value="Real Leather: Black" class="wrap-radio-black" id="ie6jtd" />
-                  <span id="iwgb9p">Real Leather: Black +2</span>
-                </label>
-                <label class="wrap-option" id="iam0cs">
-                  <input type="radio" name="wrap" value="Black Foam" class="wrap-radio-foam" id="iqxfpp" />
-                  <span id="iskwef">Black Foam</span>
-                </label>
-                <label class="wrap-option" id="ig9kih">
-                  <input type="radio" name="wrap" value="None" class="wrap-radio-none" id="i3e25j" />
-                  <span id="io6d74">None</span>
-                </label>
+        </section>
+        <section id="gallery" class="section-gallery">
+          <article class="gjs-t-border gallery-glass-article" id="i3s1j">
+            <header class="gallery-header" id="i3pek">
+              <h2 class="gjs-t-h2" id="i363x">Gallery</h2>
+              <small class="gallery-header-note" id="ix5fm">Sample shots taken with Penncamm MK1</small>
+            </header>
+            <div class="gallery-grid" id="i53k6">
+              <figure class="gallery-item-figure" id="iuxik">
+                <img loading="lazy" width="400" height="300" alt="City Night Scene" src="https://app.grapesjs.com/api/assets/random-image?query=%22city%20night%20street%20photography%22&amp;w=600&amp;h=400" class="gallery-item-image" id="iwwkj" />
+                <figcaption class="gallery-item-caption" id="isgsg">
+                  City Streets — Downtown, Night
+                </figcaption>
+              </figure>
+              <figure class="gallery-item-figure" id="io85i">
+                <img loading="lazy" width="400" height="300" alt="Landscape Dawn Scene" src="https://app.grapesjs.com/api/assets/random-image?query=%22dawn%20mountain%20landscape%20photography%22&amp;w=600&amp;h=400" class="gallery-item-image" id="iitzg" />
+                <figcaption class="gallery-item-caption" id="icc5r">
+                  Dawn Peaks — Alpine Ridge, Morning
+                </figcaption>
+              </figure>
+              <figure class="gallery-item-figure" id="iqcl6">
+                <img loading="lazy" width="400" height="300" alt="Macro Flower Scene" src="https://app.grapesjs.com/api/assets/random-image?query=%22macro%20flower%20photography%20bokeh%22&amp;w=600&amp;h=400" class="gallery-item-image" id="iapan" />
+                <figcaption class="gallery-item-caption" id="ie2op">
+                  Macro Bloom — Botanical Garden, Afternoon
+                </figcaption>
+              </figure>
+            </div>
+          </article>
+        </section>
+        <section id="features" class="section-features">
+          <article class="gjs-t-border features-glass-article" id="itlgn">
+            <header class="features-header" id="iys6g">
+              <h2 class="gjs-t-h2" id="ihymi">Features</h2>
+              <small class="features-header-note" id="ipw0s">Designed for simplicity, capable of complexity</small>
+            </header>
+            <div class="features-group-build" id="ik4fk">
+              <h3 class="features-subheading-build" id="i8p8v">Build</h3>
+              <ul class="features-list-build" id="iv7l5">
+                <li class="feature-item" id="iqu6f">
+                  <strong class="feature-name" id="i6l0y">Monocoque Shell</strong>
+                  <span class="feature-description" id="iftzc">Rigid, lightweight frame for durability without bulk.</span>
+                </li>
+                <li class="feature-item" id="i0bxq">
+                  <strong class="feature-name" id="ildkf">Ergonomic Grip</strong>
+                  <span class="feature-description" id="i8wqs">Balanced for long shoots with fatigue-reducing contours.</span>
+                </li>
+                <li class="feature-item" id="ije7j">
+                  <strong class="feature-name" id="il51k">Weather-Resistant Seals</strong>
+                  <span class="feature-description" id="ipk7l">Confident performance in light rain and dusty trails.</span>
+                </li>
+                <li class="feature-item" id="iptil">
+                  <strong class="feature-name" id="i3yge">Modular Panels</strong>
+                  <span class="feature-description" id="ih82n">Swap wraps and cases without tools for fast personalization.</span>
+                </li>
+              </ul>
+            </div>
+            <div class="features-group-technology" id="iziz7v">
+              <h3 class="features-subheading-technology" id="itiu8v">Technology</h3>
+              <ul class="features-list-technology" id="i53hpr">
+                <li class="feature-item" id="i0twmw">
+                  <strong class="feature-name" id="ic3x4j">Precision Optics</strong>
+                  <span class="feature-description" id="i3mcsi">Crisp detail with multi-coated elements and low distortion.</span>
+                </li>
+                <li class="feature-item" id="i96vkx">
+                  <strong class="feature-name" id="ilz1bj">Smart Storage</strong>
+                  <span class="feature-description" id="i6bkwe">Configurable capacity from casual sessions to multi-day trips.</span>
+                </li>
+                <li class="feature-item" id="ief3nc">
+                  <strong class="feature-name" id="ibmydl">Efficient Power</strong>
+                  <span class="feature-description" id="ihqfsw">Optimized consumption extends battery life in the field.</span>
+                </li>
+                <li class="feature-item" id="i6if9i">
+                  <strong class="feature-name" id="ihwptw">USB-C Ready</strong>
+                  <span class="feature-description" id="i7ahj7">Modern charging and data for a no-fuss workflow.</span>
+                </li>
+              </ul>
+            </div>
+          </article>
+        </section>
+        <section id="manufacturing" class="section-manufacturing">
+          <article class="gjs-t-border manufacturing-glass-article" id="i52fn6">
+            <header class="manufacturing-header" id="irgxto">
+              <h2 class="gjs-t-h2" id="if2acm">Manufacturing</h2>
+              <small class="manufacturing-header-note" id="i96flr">Handmade, sustainable, unique</small>
+            </header>
+            <p class="manufacturing-paragraph" id="irrcun">
+              Each Penncamm MK1 is meticulously handmade, creating a truly unique character in every unit. We use eco‑friendly materials and real leather parts for wraps and accents. The process prioritizes craftsmanship, repairability, and a minimal footprint—so your camera feels personal and lasts longer.
+            </p>
+            <dl class="manufacturing-facts-list" id="iwpdnt">
+              <div class="manufacturing-fact" id="i12e1n">
+                <dt class="manufacturing-fact-term" id="ionzs6">Lead Time</dt>
+                <dd class="manufacturing-fact-detail" id="iht2un">0–14 days</dd>
               </div>
-            </fieldset>
-            <fieldset class="accent-fieldset" id="iaz5sl">
-              <legend class="accent-legend" id="i4yrsl">Accent</legend>
-              <div class="accent-options" id="ihwml1">
-                <label class="accent-option" id="i6donb">
-                  <input type="radio" name="accent" value="Color fade" checked class="accent-radio-fade" id="i7jwuz" />
-                  <span id="i5ydis">Color fade +2</span>
-                </label>
-                <label class="accent-option" id="icg8rv">
-                  <input type="radio" name="accent" value="Clear" class="accent-radio-clear" id="ins85d" />
-                  <span id="iauy7t">Clear</span>
-                </label>
-                <label class="accent-option" id="iuzq19">
-                  <input type="radio" name="accent" value="Black" class="accent-radio-black" id="izvbb5" />
-                  <span id="in3jaf">Black</span>
-                </label>
+              <div class="manufacturing-fact" id="i6sw9q">
+                <dt class="manufacturing-fact-term" id="iziwd9">Current Generation</dt>
+                <dd class="manufacturing-fact-detail" id="ilxbdd">GEN2</dd>
               </div>
-            </fieldset>
-            <fieldset class="case-fieldset" id="i3zq3a">
-              <legend class="case-legend" id="ih4b9f">Case</legend>
-              <div class="case-options" id="icuuqg">
-                <label class="case-option" id="ick2te">
-                  <input type="radio" name="case" value="Steel" checked class="case-radio-steel" id="i7yegp" />
-                  <span id="iisxtt">Steel +5</span>
-                </label>
-                <label class="case-option" id="ix58xo">
-                  <input type="radio" name="case" value="Plastic" class="case-radio-plastic" id="izdxhc" />
-                  <span id="ijze2w">Plastic</span>
-                </label>
-                <label class="case-option" id="iqtb7j">
-                  <input type="radio" name="case" value="Color fade" class="case-radio-fade" id="isztlb" />
-                  <span id="ix5pkm">Color fade +2</span>
-                </label>
-                <label class="case-option" id="i5h1ui">
-                  <input type="radio" name="case" value="Clear" class="case-radio-clear" id="iriu5i" />
-                  <span id="inqyf6">Clear +2</span>
-                </label>
+              <div class="manufacturing-fact" id="inu0le">
+                <dt class="manufacturing-fact-term" id="itz54n">Materials</dt>
+                <dd class="manufacturing-fact-detail" id="irbxti">Eco-friendly base, real leather wraps</dd>
               </div>
-            </fieldset>
-            <fieldset class="storage-fieldset" id="i87g5q">
-              <legend class="storage-legend" id="i4fzai">Storage</legend>
-              <div class="storage-options" id="irpr3h">
-                <label class="storage-option" id="ibzr1r">
-                  <input type="radio" name="storage" value="None" class="storage-radio-none" id="iysoih" />
-                  <span id="iufje4">None</span>
-                </label>
-                <label class="storage-option" id="ig35v8">
-                  <input type="radio" name="storage" value="16gb" checked class="storage-radio-16" id="iblemf" />
-                  <span id="idooe2">16gb (~1h|200photos) +5</span>
-                </label>
-                <label class="storage-option" id="idf35h">
-                  <input type="radio" name="storage" value="32gb" class="storage-radio-32" id="il3305" />
-                  <span id="i6ayhk">32gb (~3h|+500photos) +10</span>
-                </label>
-                <label class="storage-option" id="ijo1ki">
-                  <input type="radio" name="storage" value="64gb" class="storage-radio-64" id="ig2ahf" />
-                  <span id="imsnb2">64gb (~6h|+1000photos) +15</span>
-                </label>
-                <label class="storage-option" id="i953mh">
-                  <input type="radio" name="storage" value="128gb" class="storage-radio-128" id="i1bbfx" />
-                  <span id="iqbxv8">128gb (~12h|+2000photos) +20</span>
-                </label>
-                <label class="storage-option" id="ik4cmt">
-                  <input type="radio" name="storage" value="256gb" class="storage-radio-256" id="ivvx5c" />
-                  <span id="ij4d19">256gb (~32h|+4000photos) +25</span>
-                </label>
+            </dl>
+          </article>
+        </section>
+        <section id="about" class="section-about">
+          <article class="gjs-t-border about-glass-article" id="ie8ezd">
+            <header class="about-header" id="i3izkh">
+              <h2 class="gjs-t-h2" id="ico55l">About Me</h2>
+            </header>
+            <p class="about-paragraph" id="iic0ml">
+              I’m the creator of Penncamm—driven by a passion for honest tools and thoughtful design. I build each camera with care, aiming to simplify your shooting experience while giving you room to explore complexity when you need it.
+            </p>
+            <div class="about-action-container" id="ij67ei">
+              <a href="#buy" class="gjs-t-button about-learn-more-button" id="i9ydxk">Learn More</a>
+            </div>
+          </article>
+        </section>
+        <section id="buy" class="section-buy">
+          <article id="i0f2qv" class="gjs-t-border buy-glass-article">
+            <header id="idlc9s" class="buy-header">
+              <h2 id="ihn38q" class="gjs-t-h2">Buy Now</h2>
+              <small id="in93hc" class="buy-subtitle">Base: $30 parts + $50 labor = $80</small>
+              <div id="itew9e" class="buy-lead-time-generation">
+                Lead time: 0–14 days — Current Generation: GEN2
               </div>
-              <div class="storage-class-area" id="i7wpnc">
-                <p class="storage-class-title" id="ixxgd7">Storage Class</p>
-                <div class="storage-class-options" id="il4iif">
-                  <label class="storage-class-option" id="i3p5v7">
-                    <input type="radio" name="storageClass" value="Class 10" checked class="storage-class-radio-10" id="iu98p8" />
-                    <span id="ixr3zp">Class 10 +5</span>
-                  </label>
-                  <label class="storage-class-option" id="i6c60n">
-                    <input type="radio" name="storageClass" value="Class &lt;10" class="storage-class-radio-10" id="injs3n" />
-                    <span id="i9s54y">Class &lt;10</span>
-                  </label>
+            </header>
+            <div id="idtv6p" class="buy-grid">
+              <form method="get" id="quoteForm" class="buy-form">
+                <fieldset id="isa2uu" class="form-fieldset-wrap">
+                  <label for="wrap" id="ih78hb" class="form-label-wrap">Wrap</label>
+                  <select type="text" id="wrap" name="wrap" class="gjs-t-border form-select-wrap">
+                    <option value="Real Leather: Tan" data-price="2" id="iwa5wo">Real Leather: Tan +2</option>
+                    <option value="Real Leather: Brown" data-price="2" id="iym7zk">Real Leather: Brown +2</option>
+                    <option value="Real Leather: Black" data-price="2" id="i90wcg">Real Leather: Black +2</option>
+                    <option value="Black Foam" data-price="0" id="izrfta">Black Foam</option>
+                    <option value="None" data-price="0" id="imc7ac">None</option>
+                  </select>
+                </fieldset>
+                <fieldset id="ipgst3" class="form-fieldset-accent">
+                  <label for="accent" id="idj96y" class="form-label-accent">Accent</label>
+                  <select type="text" id="accent" name="accent" class="gjs-t-border form-select-accent">
+                    <option value="Color fade" data-price="2" id="ihav5a">Color fade +2</option>
+                    <option value="Clear" data-price="0" id="irhjfb">Clear</option>
+                    <option value="Black" data-price="0" id="ivc114">Black</option>
+                  </select>
+                </fieldset>
+                <fieldset id="iqy7sh" class="form-fieldset-case">
+                  <label for="case" id="ihwo9z" class="form-label-case">Case</label>
+                  <select type="text" id="case" name="case" class="gjs-t-border form-select-case">
+                    <option value="Steel" data-price="5" id="iujy1k">Steel +5</option>
+                    <option value="Plastic" data-price="0" id="isd789">Plastic</option>
+                    <option value="Color fade" data-price="2" id="ireg3m">Color fade +2</option>
+                    <option value="Clear" data-price="2" id="i5c81m">Clear +2</option>
+                  </select>
+                </fieldset>
+                <fieldset id="iw415l" class="form-fieldset-storage-capacity">
+                  <label for="storage" id="i9nnbj" class="form-label-storage-capacity">Storage Capacity</label>
+                  <select type="text" id="storage" name="storage" class="gjs-t-border form-select-storage-capacity">
+                    <option value="None" data-price="0" id="ikuv1k">None</option>
+                    <option value="16gb (~1h|200photos)" data-price="5" id="ih537v">16gb (~1h|200photos) +5</option>
+                    <option value="32gb (~3h|+500photos)" data-price="10" id="ix66yk">32gb (~3h|+500photos) +10</option>
+                    <option value="64gb (~6h|+1000photos)" data-price="15" id="iv6a3g">64gb (~6h|+1000photos) +15</option>
+                    <option value="128gb (~12h|+2000photos)" data-price="20" id="ictgmh">128gb (~12h|+2000photos) +20</option>
+                    <option value="256gb (~32h|+4000photos)" data-price="25" id="ix16l1">256gb (~32h|+4000photos) +25</option>
+                  </select>
+                </fieldset>
+                <fieldset id="id4e9c" class="form-fieldset-storage-class">
+                  <label for="storageClass" id="i2hzej" class="form-label-storage-class">Storage Class</label>
+                  <select type="text" id="storageClass" name="storageClass" class="gjs-t-border form-select-storage-class">
+                    <option value="Class 10" data-price="5" id="iizjr7">Class 10 +5</option>
+                    <option value="Class &lt;10" data-price="0" id="iifu7p">Class &lt;10</option>
+                  </select>
+                </fieldset>
+                <fieldset id="iug0wj" class="form-fieldset-lens">
+                  <label id="ivygxc" class="form-label-lens">Lens (select all that apply)</label>
+                  <div id="i265jh" class="form-lens-options-grid">
+                    <label id="ihssxg" class="lens-option">
+                      <input type="checkbox" name="lens" value="Basic" data-price="0" checked id="iw7a7s" class="lens-checkbox-basic" />
+                      <span id="ij4pww">Basic</span>
+                    </label>
+                    <label id="ise5qy" class="lens-option">
+                      <input type="checkbox" name="lens" value="Macro" data-price="5" id="i359bv" class="lens-checkbox-macro" />
+                      <span id="i7uohu">Macro +5</span>
+                    </label>
+                    <label id="i83tai" class="lens-option">
+                      <input type="checkbox" name="lens" value="Fisheye" data-price="5" id="i34xob" class="lens-checkbox-fisheye" />
+                      <span id="ittawk">Fisheye +5</span>
+                    </label>
+                    <label id="ikim79" class="lens-option">
+                      <input type="checkbox" name="lens" value="Zoom (&gt;10x)" data-price="10" id="ibk5oh" class="lens-checkbox-zoom" />
+                      <span id="i59oyc">Zoom (&gt;10x) +10</span>
+                    </label>
+                  </div>
+                </fieldset>
+                <fieldset id="iqa44s" class="form-fieldset-charger">
+                  <label for="charger" id="ianew7" class="form-label-charger">Charger</label>
+                  <select type="text" id="charger" name="charger" class="gjs-t-border form-select-charger">
+                    <option value="None (Use own)" data-price="0" id="ir5tq4">None (Use own)</option>
+                    <option value="USB-C" data-price="1" id="iw1ogj">USB-C +1</option>
+                  </select>
+                </fieldset>
+                <fieldset id="iluy4b" class="form-fieldset-battery">
+                  <label for="battery" id="i8bmmh" class="form-label-battery">Battery</label>
+                  <select type="text" id="battery" name="battery" class="gjs-t-border form-select-battery">
+                    <option value="2000mah (&gt;6h)" data-price="10" id="iexqb3">2000mah (&gt;6h) +10</option>
+                    <option value="200mah (~1h)" data-price="0" id="ixaj3j">200mah (~1h)</option>
+                  </select>
+                </fieldset>
+                <fieldset id="iq000g" class="gjs-t-border form-fieldset-shipping">
+                  <label for="shipping" id="ir28q4" class="form-label-shipping">Shipping</label>
+                  <select type="text" id="shipping" name="shipping" class="gjs-t-border form-select-shipping">
+                    <option value="Next Day" data-price="20" id="ijwwvh">Next Day +20</option>
+                    <option value="Standard (&gt;7 days)" data-price="5" id="i66g8v">Standard (&gt;7 days) +5</option>
+                    <option value="Pick up" data-price="0" id="iayle5">Pick up</option>
+                  </select>
+                </fieldset>
+                <fieldset id="id5wpf" class="form-fieldset-customer-info">
+                  <label for="customerName" id="iwsmhx" class="form-label-name">Your Name</label>
+                  <input type="text" id="customerName" name="customerName" placeholder="Full name" class="gjs-t-border form-input-name" />
+                  <label for="customerEmail" id="i74usf" class="form-label-email">Email</label>
+                  <input type="email" id="customerEmail" name="customerEmail" placeholder="you@example.com" class="gjs-t-border form-input-email" />
+                  <label for="customerPhone" id="iwwgci" class="form-label-phone">Phone</label>
+                  <input type="tel" id="customerPhone" name="customerPhone" placeholder="+1 (___) ___-____" class="gjs-t-border form-input-phone" />
+                  <label for="customerAddress" id="im5dtk" class="form-label-address">Shipping Address</label>
+                  <textarea id="customerAddress" name="customerAddress" rows="3" placeholder="Street, City, State, ZIP, Country" class="gjs-t-border form-textarea-address"></textarea>
+                </fieldset>
+              </form>
+              <aside id="iumiyn" class="quote-summary-aside">
+                <div id="iul8lw" class="gjs-t-border quote-summary-box">
+                  <h3 id="iemdji" class="quote-summary-title">Itemized Selections</h3>
+                  <ul id="itemized" class="quote-itemized-list"></ul>
+                  <hr id="in4hu9" class="quote-divider" />
+                  <div id="ikw6e2" class="quote-total-row">
+                    <span id="i16gjc" class="quote-total-label">Total</span>
+                    <strong id="totalPrice" class="quote-total-value">$80</strong>
+                  </div>
+                  <small id="i93c7f" class="quote-note">Includes $30 parts + $50 labor before options.</small>
                 </div>
-              </div>
-            </fieldset>
-            <fieldset class="lens-fieldset" id="i8u6tb">
-              <legend class="lens-legend" id="i3r8w8">Lens (select all)</legend>
-              <div class="lens-options" id="it3yvs">
-                <label class="lens-option" id="ivivct">
-                  <input type="checkbox" name="lens" value="Basic" checked class="lens-checkbox-basic" id="is5fkl" />
-                  <span id="igc5r8">Basic</span>
-                </label>
-                <label class="lens-option" id="iy3fdx">
-                  <input type="checkbox" name="lens" value="Macro" class="lens-checkbox-macro" id="ii7wa6" />
-                  <span id="i4jfea">Macro +5</span>
-                </label>
-                <label class="lens-option" id="iv4849">
-                  <input type="checkbox" name="lens" value="Fisheye" class="lens-checkbox-fisheye" id="i0owup" />
-                  <span id="i6autj">Fisheye +5</span>
-                </label>
-                <label class="lens-option" id="i6dndc">
-                  <input type="checkbox" name="lens" value="Zoom (&gt;10x)" class="lens-checkbox-zoom" id="isr1nl" />
-                  <span id="inuex1">Zoom (&gt;10x) +10</span>
-                </label>
-              </div>
-            </fieldset>
-            <fieldset class="charger-fieldset" id="it2q1e">
-              <legend class="charger-legend" id="ipmp0b">Charger</legend>
-              <div class="charger-options" id="izqykc">
-                <label class="charger-option" id="ir7n26">
-                  <input type="radio" name="charger" value="None (Use own)" checked class="charger-radio-none" id="il48hy" />
-                  <span id="ia925v">None (Use own)</span>
-                </label>
-                <label class="charger-option" id="ikx50w">
-                  <input type="radio" name="charger" value="USB-C" class="charger-radio-usb-c" id="i3jop4" />
-                  <span id="i8um4d">USB-C +1</span>
-                </label>
-              </div>
-            </fieldset>
-            <fieldset class="battery-fieldset" id="ihcmbk">
-              <legend class="battery-legend" id="i14esx">Battery</legend>
-              <div class="battery-options" id="i8kgty">
-                <label class="battery-option" id="i5tabs">
-                  <input type="radio" name="battery" value="2000mah (&gt;6h)" checked class="battery-radio-2000" id="iq3hd5" />
-                  <span id="iyct2g">2000mah (&gt;6h) +10</span>
-                </label>
-                <label class="battery-option" id="ii50yf">
-                  <input type="radio" name="battery" value="200mah (~1h)" class="battery-radio-200" id="isbt62" />
-                  <span id="iiuy6n">200mah (~1h)</span>
-                </label>
-              </div>
-            </fieldset>
-            <fieldset class="shipping-fieldset" id="iw4igw">
-              <legend class="shipping-legend" id="ik9eoq">
-                <b id="ilihkf">Shipping</b>
-              </legend>
-              <div class="shipping-options" id="ipzwxn">
-                <label class="shipping-option" id="iwu1sr">
-                  <input type="radio" name="shipping" value="Next Day" checked class="shipping-radio-next-day" id="ih4git" />
-                  <span class="shipping-label-text" id="iwzbnl">Next Day +20</span>
-                </label>
-                <label class="shipping-option" id="i2sv61">
-                  <input type="radio" name="shipping" value="Standard (&gt;7 days)" class="shipping-radio-standard" id="ivby4d" />
-                  <span class="shipping-label-text" id="iebu7h">Standard (&gt;7 days) +5</span>
-                </label>
-                <label class="shipping-option" id="i77bei">
-                  <input type="radio" name="shipping" value="Pick up" class="shipping-radio-pickup" id="iyce4x" />
-                  <span class="shipping-label-text" id="iaun9i">Pick up</span>
-                </label>
-              </div>
-            </fieldset>
-            <fieldset class="contact-fieldset" id="inurho">
-              <legend class="contact-legend" id="iqwid2">Contact</legend>
-              <div class="contact-grid" id="i86oai">
-                <label class="contact-name-label" id="ii0ac7">
-                  <span class="contact-name-text" id="i1v08t">Full name</span>
-                  <input type="text" id="custName" placeholder="Your name" class="contact-name-input" />
-                </label>
-                <label class="contact-email-label" id="ip4de9">
-                  <span class="contact-email-text" id="il7kod">Email</span>
-                  <input type="email" id="custEmail" placeholder="you@example.com" class="contact-email-input" />
-                </label>
-                <label class="contact-phone-label" id="i6i36h">
-                  <span class="contact-phone-text" id="iro774">Phone</span>
-                  <input type="tel" id="custPhone" placeholder="+1 555 000 0000" class="contact-phone-input" />
-                </label>
-                <label class="contact-address-label" id="ic5wvj">
-                  <span class="contact-address-text" id="ie0s0y">Address</span>
-                  <textarea id="custAddress" rows="3" placeholder="Street, City, State, ZIP, Country" class="contact-address-input"></textarea>
-                </label>
-              </div>
-            </fieldset>
-            <fieldset class="summary-fieldset" id="i18muw">
-              <legend class="summary-legend" id="i7g0yn">Itemized summary</legend>
-              <div id="summary" class="summary-content">
-                <div class="summary-list" id="ixb7af">
-                  <p class="summary-base-parts" id="iezeyf">Parts: $30</p>
-                  <p class="summary-labor" id="iu6kqz">Labor: $50</p>
-                  <ul id="summaryList" class="summary-selections-list"></ul>
+                <div id="i6v6vp" class="form-actions">
+                  <button type="button" id="generateQuote" class="gjs-t-button form-button-generate-quote">Generate Quote &amp; Email</button>
+                  <button type="button" id="copyEmail" class="gjs-t-border form-button-copy-email">Copy Email</button>
                 </div>
-                <div id="summaryImages" class="summary-images-grid"></div>
-              </div>
-            </fieldset>
-            <fieldset class="email-fieldset" id="iywrig">
-              <legend class="email-legend" id="icogx5">Email template</legend>
-              <p class="email-directions" id="isy3ig">A template will be generated. Send to cam@pennbrenn.com.</p>
-              <textarea id="emailTemplate" rows="6" placeholder="Your email template will appear here..." class="email-template-textarea"></textarea>
-              <div class="email-actions" id="iyfz4b">
-                <a id="mailtoLink" href="mailto:cam@pennbrenn.com" class="gjs-t-button draft-email-button">Draft email</a>
-                <button type="button" id="copyTemplate" class="copy-template-button">Copy template</button>
-              </div>
-            </fieldset>
-          </form>
-        </div>
-      </section>
-      <section id="legal" class="legal-section">
-        <div class="gjs-t-border legal-bubble" id="ie0t9c">
-          <a href="https://example.com/terms.pdf" target="_blank" class="gjs-t-link legal-link" id="iiwbof">View Terms of Service</a>
-        </div>
-      </section>
-    </main>
-    <footer class="footer-section" id="iya7ek">
-      <div class="footer-container" id="i8ur2w">
-        <p class="footer-text" id="ickjs9">© <span id="i7kf05">2025</span> Penncamm. All rights reserved.</p>
-      </div>
-    </footer>
-    <script id="i3ge8t">
+                <div id="ip3fg6" class="gjs-t-border email-template-box">
+                  <h3 id="inx0ny" class="email-template-title">Email Template</h3>
+                  <textarea id="emailTemplate" rows="8" placeholder="Click 'Generate Quote &amp; Email' to populate." class="gjs-t-border email-template-textarea"></textarea>
+                  <p id="iv2nlx" class="email-template-helper">Will email to: cam@pennbrenn.com</p>
+                </div>
+                <div id="iy2va1" class="gjs-t-border example-previews-box">
+                  <h3 id="itg5r1" class="example-previews-title">Example Previews</h3>
+                  <div id="previews" class="example-previews-grid"><!-- Dynamic example thumbnails inserted here --></div>
+                </div>
+              </aside>
+            </div>
+          </article>
+        </section>
+        <section id="legal" class="section-legal">
+          <article class="gjs-t-border legal-glass-article" id="ipg0b3">
+            <h2 class="gjs-t-h2" id="itqz0c">Legal</h2>
+            <p class="legal-paragraph" id="iy4tfv">Please review our Terms of Service before purchasing.</p>
+            <a href="https://example.com/terms" target="_blank" rel="noopener" class="gjs-t-button legal-terms-link" id="ioudr3">Open Terms of Service</a>
+          </article>
+        </section>
+      </main>
+      <footer class="footer-wrapper" id="i2l5xv">
+        <p class="footer-text" id="ik501l">© <span id="year"></span> Penncamm. All rights reserved.</p>
+      </footer>
+    </div>
+    <script id="ilr9jt">
+      // Year
+      document.getElementById('year').textContent = new Date().getFullYear();
+
       // Typewriter effect
-      (function() {
+      (function typewriterInit() {
         const el = document.getElementById('typewriter');
-        const lines = ['Built For Simplicity', 'Used For Complexity'];
-        let i = 0,
-          j = 0,
-          deleting = false;
-        const speed = 75,
-          hold = 1200;
+        if (!el) return;
+        const phrases = ["Built For Simplicity", "Used For Complexity"];
+        let pi = 0,
+          ci = 0,
+          dir = 1,
+          pause = 0;
 
         function tick() {
-          const current = lines[i % lines.length];
-          if (!deleting) {
-            j++;
-            el.textContent = current.slice(0, j);
-            if (j === current.length) {
-              deleting = true;
-              setTimeout(tick, hold);
-              return;
-            }
-          } else {
-            j--;
-            el.textContent = current.slice(0, j);
-            if (j === 0) {
-              deleting = false;
-              i++;
-            }
+          if (pause > 0) {
+            pause--;
+            return;
           }
-          setTimeout(tick, deleting ? 40 : speed);
+          const text = phrases[pi];
+          el.textContent = text.slice(0, ci);
+          ci += dir;
+
+          if (ci > text.length) {
+            dir = -1;
+            pause = 20;
+          } else if (ci < 0) {
+            dir = 1;
+            pi = (pi + 1) % phrases.length;
+            pause = 5;
+          }
         }
-        tick();
+        setInterval(tick, 60);
       })();
 
-      // Nav active on scroll (maps multiple sub-sections to 4 main tabs)
-      (function() {
+      // Nav active state on scroll with mapping for sections -> tabs
+      (function navObserver() {
+        const links = {
+          home: document.querySelector('a[href="#home"]'),
+          gallery: document.querySelector('a[href="#gallery"]'),
+          features: document.querySelector('a[href="#features"]'),
+          buy: document.querySelector('a[href="#buy"]'),
+        };
+        const clear = () => Object.values(links).forEach(l => l && l.classList.remove('tab-active'));
+        const activate = (key) => {
+          clear();
+          if (links[key]) links[key].classList.add('tab-active');
+        };
+
         const map = {
-          home: document.getElementById('nav-home'),
-          gallery: document.getElementById('nav-gallery'),
-          features: document.getElementById('nav-features'),
-          buy: document.getElementById('nav-buy')
+          home: 'home',
+          gallery: 'gallery',
+          features: 'features',
+          manufacturing: 'features',
+          about: 'features',
+          buy: 'buy',
+          legal: 'buy'
         };
-        const sections = [{
-            id: 'home',
-            el: document.getElementById('home'),
-            tab: 'home'
-          },
-          {
-            id: 'gallery',
-            el: document.getElementById('gallery'),
-            tab: 'gallery'
-          },
-          {
-            id: 'features',
-            el: document.getElementById('features'),
-            tab: 'features'
-          },
-          {
-            id: 'manufacturing',
-            el: document.getElementById('manufacturing'),
-            tab: 'features'
-          },
-          {
-            id: 'about',
-            el: document.getElementById('about'),
-            tab: 'features'
-          },
-          {
-            id: 'buy',
-            el: document.getElementById('buy'),
-            tab: 'buy'
-          },
-          {
-            id: 'legal',
-            el: document.getElementById('legal'),
-            tab: 'buy'
-          }
-        ];
-        const options = {
-          root: null,
-          rootMargin: '0px 0px -60% 0px',
-          threshold: 0.1
-        };
-        const clear = () => Object.values(map).forEach(a => a.classList.remove('border-b-2', 'border-[#465e73]', 'text-white'));
-        const observer = new IntersectionObserver(entries => {
+
+        const sections = Array.from(document.querySelectorAll('section[id]'));
+        const io = new IntersectionObserver((entries) => {
           entries.forEach(entry => {
             if (entry.isIntersecting) {
-              const sec = sections.find(s => s.el === entry.target);
-              if (sec) {
-                clear();
-                const tab = map[sec.tab];
-                if (tab) {
-                  tab.classList.add('border-b-2', 'border-[#465e73]', 'text-white');
-                }
-              }
+              const id = entry.target.id;
+              const key = map[id] || null;
+              if (key) activate(key);
             }
           });
-        }, options);
-        sections.forEach(s => s.el && observer.observe(s.el));
-        // Click scroll highlight immediately
-        Object.values(map).forEach(a => {
-          a.addEventListener('click', () => {
-            clear();
-            a.classList.add('border-b-2', 'border-[#465e73]', 'text-white');
-          });
+        }, {
+          rootMargin: "-40% 0px -55% 0px",
+          threshold: 0.01
         });
+
+        sections.forEach(sec => io.observe(sec));
       })();
 
-      // Quoting system
-      (function() {
-        const priceMap = {
-          wrap: {
-            'Real Leather: Tan': 2,
-            'Real Leather: Brown': 2,
-            'Real Leather: Black': 2,
-            'Black Foam': 0,
-            'None': 0
-          },
-          accent: {
-            'Color fade': 2,
-            'Clear': 0,
-            'Black': 0
-          },
-          case: {
-            'Steel': 5,
-            'Plastic': 0,
-            'Color fade': 2,
-            'Clear': 2
-          },
-          storage: {
-            'None': 0,
-            '16gb': 5,
-            '32gb': 10,
-            '64gb': 15,
-            '128gb': 20,
-            '256gb': 25
-          },
-          storageClass: {
-            'Class 10': 5,
-            'Class <10': 0
-          },
-          lens: {
-            'Basic': 0,
-            'Macro': 5,
-            'Fisheye': 5,
-            'Zoom (>10x)': 10
-          },
-          charger: {
-            'None (Use own)': 0,
-            'USB-C': 1
-          },
-          battery: {
-            '2000mah (>6h)': 10,
-            '200mah (~1h)': 0
-          },
-          shipping: {
-            'Next Day': 20,
-            'Standard (>7 days)': 5,
-            'Pick up': 0
-          }
-        };
-        const imageMap = {
-          'Real Leather: Tan': 'camera%20leather%20tan%20wrap',
-          'Real Leather: Brown': 'camera%20leather%20brown%20wrap',
-          'Real Leather: Black': 'camera%20leather%20black%20wrap',
-          'Black Foam': 'camera%20black%20foam%20grip',
-          'None': 'minimal%20camera%20bare%20body',
-
-          'Color fade': 'camera%20color%20fade%20accent',
-          'Clear': 'transparent%20camera%20accent',
-          'Black': 'black%20camera%20accent',
-
-          'Steel': 'metal%20camera%20case',
-          'Plastic': 'plastic%20camera%20case',
-          '16gb': 'sd%20card%2016gb',
-          '32gb': 'sd%20card%2032gb',
-          '64gb': 'sd%20card%2064gb',
-          '128gb': 'sd%20card%20128gb',
-          '256gb': 'sd%20card%20256gb',
-
-          'Class 10': 'sd%20card%20class%2010',
-          'Class <10': 'sd%20card%20class%206',
-
-          'Basic': 'camera%20prime%20lens',
-          'Macro': 'macro%20lens%20photography',
-          'Fisheye': 'fisheye%20lens',
-          'Zoom (>10x)': 'telephoto%20zoom%20lens',
-
-          'USB-C': 'usb-c%20charger',
-          'None (Use own)': 'charging%20cable',
-
-          '2000mah (>6h)': 'lithium%20ion%20battery%202000mah',
-          '200mah (~1h)': 'small%20battery',
-
-          'Next Day': 'delivery%20express',
-          'Standard (>7 days)': 'delivery%20standard',
-          'Pick up': 'store%20pickup'
-        };
-        const baseParts = 30,
-          baseLabor = 50;
-
-        const form = document.getElementById('configForm');
-        const summaryList = document.getElementById('summaryList');
-        const summaryImages = document.getElementById('summaryImages');
+      // Quote calculator
+      (function quote() {
+        const BASE = 80; // 30 parts + 50 labor
+        const form = document.getElementById('quoteForm');
+        const itemized = document.getElementById('itemized');
         const totalPriceEl = document.getElementById('totalPrice');
+        const previews = document.getElementById('previews');
         const emailTemplate = document.getElementById('emailTemplate');
-        const mailtoLink = document.getElementById('mailtoLink');
+        const generateBtn = document.getElementById('generateQuote');
+        const copyBtn = document.getElementById('copyEmail');
 
-        const nameEl = document.getElementById('custName');
-        const emailEl = document.getElementById('custEmail');
-        const phoneEl = document.getElementById('custPhone');
-        const addrEl = document.getElementById('custAddress');
+        const previewMap = {
+          'Real Leather: Tan': 'https://app.grapesjs.com/api/assets/random-image?query=%22tan%20leather%20texture%22&w=300&h=200',
+          'Real Leather: Brown': 'https://app.grapesjs.com/api/assets/random-image?query=%22brown%20leather%20texture%22&w=300&h=200',
+          'Real Leather: Black': 'https://app.grapesjs.com/api/assets/random-image?query=%22black%20leather%20texture%22&w=300&h=200',
+          'Black Foam': 'https://app.grapesjs.com/api/assets/random-image?query=%22black%20foam%20texture%22&w=300&h=200',
+          'Color fade (Accent)': 'https://app.grapesjs.com/api/assets/random-image?query=%22color%20gradient%20fade%20abstract%22&w=300&h=200',
+          'Clear (Accent)': 'https://app.grapesjs.com/api/assets/random-image?query=%22clear%20transparent%20acrylic%22&w=300&h=200',
+          'Black (Accent)': 'https://app.grapesjs.com/api/assets/random-image?query=%22matte%20black%20texture%22&w=300&h=200',
+          'Steel Case': 'https://app.grapesjs.com/api/assets/random-image?query=%22brushed%20steel%20texture%22&w=300&h=200',
+          'Plastic Case': 'https://app.grapesjs.com/api/assets/random-image?query=%22black%20plastic%20texture%22&w=300&h=200',
+          'Color fade Case': 'https://app.grapesjs.com/api/assets/random-image?query=%22color%20gradient%20fade%20abstract%22&w=300&h=200',
+          'Clear Case': 'https://app.grapesjs.com/api/assets/random-image?query=%22clear%20transparent%20acrylic%22&w=300&h=200',
+          'Storage': 'https://app.grapesjs.com/api/assets/random-image?query=%22micro%20sd%20card%22&w=300&h=200',
+          'Lens Macro': 'https://app.grapesjs.com/api/assets/random-image?query=%22macro%20camera%20lens%22&w=300&h=200',
+          'Lens Fisheye': 'https://app.grapesjs.com/api/assets/random-image?query=%22fisheye%20camera%20lens%22&w=300&h=200',
+          'Lens Zoom': 'https://app.grapesjs.com/api/assets/random-image?query=%22telephoto%20camera%20lens%22&w=300&h=200',
+          'USB-C': 'https://app.grapesjs.com/api/assets/random-image?query=%22usb-c%20cable%22&w=300&h=200',
+          'Battery 2000': 'https://app.grapesjs.com/api/assets/random-image?query=%22lithium%20battery%20pack%22&w=300&h=200',
+          'Shipping Next Day': 'https://app.grapesjs.com/api/assets/random-image?query=%22fast%20delivery%20icon%22&w=300&h=200',
+          'Shipping Standard': 'https://app.grapesjs.com/api/assets/random-image?query=%22delivery%20package%22&w=300&h=200',
+          'Pick up': 'https://app.grapesjs.com/api/assets/random-image?query=%22store%20pickup%20counter%22&w=300&h=200'
+        };
 
-        function getSelected() {
-          const data = {};
-          data.wrap = (form.querySelector('input[name="wrap"]:checked') || {}).value || 'None';
-          data.accent = (form.querySelector('input[name="accent"]:checked') || {}).value || 'Clear';
-          data.case = (form.querySelector('input[name="case"]:checked') || {}).value || 'Plastic';
-          data.storage = (form.querySelector('input[name="storage"]:checked') || {}).value || 'None';
-          data.storageClass = (form.querySelector('input[name="storageClass"]:checked') || {}).value || 'Class <10';
-          data.lens = Array.from(form.querySelectorAll('input[name="lens"]:checked')).map(i => i.value);
-          data.charger = (form.querySelector('input[name="charger"]:checked') || {}).value || 'None (Use own)';
-          data.battery = (form.querySelector('input[name="battery"]:checked') || {}).value || '200mah (~1h)';
-          data.shipping = (form.querySelector('input[name="shipping"]:checked') || {}).value || 'Standard (>7 days)';
-          return data;
+        function getPriceFromOption(sel) {
+          const opt = sel.options[sel.selectedIndex];
+          return Number(opt.dataset.price || 0);
         }
 
-        function calcTotal(sel) {
-          let total = baseParts + baseLabor;
-          total += (priceMap.wrap[sel.wrap] || 0);
-          total += (priceMap.accent[sel.accent] || 0);
-          total += (priceMap.case[sel.case] || 0);
-          total += (priceMap.storage[sel.storage] || 0);
-          total += (priceMap.storageClass[sel.storageClass] || 0);
-          total += (priceMap.charger[sel.charger] || 0);
-          total += (priceMap.battery[sel.battery] || 0);
-          total += (priceMap.shipping[sel.shipping] || 0);
-          sel.lens.forEach(l => total += (priceMap.lens[l] || 0));
-          return total;
-        }
+        function selectionSummary() {
+          const wrap = form.wrap;
+          const accent = form.accent;
+          const caseSel = form.case;
+          const storage = form.storage;
+          const storageClass = form.storageClass;
+          const charger = form.charger;
+          const battery = form.battery;
+          const lensChecks = Array.from(form.querySelectorAll('input[name="lens"]:checked'));
 
-        function renderSummary(sel) {
-          summaryList.innerHTML = '';
-          summaryImages.innerHTML = '';
-          const items = [
-            ['Wrap', sel.wrap, priceMap.wrap[sel.wrap] || 0],
-            ['Accent', sel.accent, priceMap.accent[sel.accent] || 0],
-            ['Case', sel.case, priceMap.case[sel.case] || 0],
-            ['Storage', sel.storage, priceMap.storage[sel.storage] || 0],
-            ['Storage Class', sel.storageClass, priceMap.storageClass[sel.storageClass] || 0],
-            ['Charger', sel.charger, priceMap.charger[sel.charger] || 0],
-            ['Battery', sel.battery, priceMap.battery[sel.battery] || 0],
-            ['Shipping', sel.shipping, priceMap.shipping[sel.shipping] || 0]
-          ];
-          items.forEach(([label, value, cost]) => {
-            const li = document.createElement('li');
-            li.setAttribute('data-gjs-name', 'Summary Selection Item');
-            li.className = 'flex items-center justify-between gap-3';
-            li.innerHTML = `<span data-gjs-name="Summary Selection Label" class="text-[#d7d7d7]">${label}: <strong data-gjs-name="Summary Selection Value" class="text-white">${value}</strong></span><span data-gjs-name="Summary Selection Cost" class="text-white/80">$${cost}</span>`;
-            summaryList.appendChild(li);
-            // image for this value
-            const q = imageMap[value];
-            if (q) {
-              const fig = document.createElement('figure');
-              fig.setAttribute('data-gjs-name', 'Summary Image Item');
-              fig.className = 'bg-white/5 border border-white/10 rounded-md p-1';
-              fig.innerHTML = `
-              <img data-gjs-name="Summary Image Thumb" src="https://app.grapesjs.com/api/assets/random-image?query=${q}&w=160&h=120" alt="${label} - ${value}" class="w-full h-auto rounded object-cover" loading="lazy" width="160" height="120">
-              <figcaption data-gjs-name="Summary Image Caption" class="text-[10px] text-center mt-1 text-white/70">${label}</figcaption>`;
-              summaryImages.appendChild(fig);
+          const items = [];
+
+          // Wrap
+          items.push({
+            label: `Wrap — ${wrap.value}`,
+            price: getPriceFromOption(wrap),
+            key: wrap.value.includes('Leather') ? wrap.value : wrap.value
+          });
+
+          // Accent
+          items.push({
+            label: `Accent — ${accent.value}`,
+            price: getPriceFromOption(accent),
+            key: `${accent.value} (Accent)`
+          });
+
+          // Case
+          const caseKey = (caseSel.value === 'Steel' ? 'Steel Case' :
+            caseSel.value === 'Plastic' ? 'Plastic Case' :
+            caseSel.value === 'Color fade' ? 'Color fade Case' : 'Clear Case');
+          items.push({
+            label: `Case — ${caseSel.value}`,
+            price: getPriceFromOption(caseSel),
+            key: caseKey
+          });
+
+          // Storage capacity
+          items.push({
+            label: `Storage — ${storage.value}`,
+            price: getPriceFromOption(storage),
+            key: 'Storage'
+          });
+
+          // Storage class
+          items.push({
+            label: `Storage Class — ${storageClass.value}`,
+            price: getPriceFromOption(storageClass),
+            key: 'Storage'
+          });
+
+          // Lens
+          lensChecks.forEach(c => {
+            if (c.value === 'Basic') {
+              items.push({
+                label: 'Lens — Basic',
+                price: 0,
+                key: 'Lens Basic'
+              });
+            }
+            if (c.value === 'Macro') {
+              items.push({
+                label: 'Lens — Macro',
+                price: 5,
+                key: 'Lens Macro'
+              });
+            }
+            if (c.value === 'Fisheye') {
+              items.push({
+                label: 'Lens — Fisheye',
+                price: 5,
+                key: 'Lens Fisheye'
+              });
+            }
+            if (c.value.includes('Zoom')) {
+              items.push({
+                label: 'Lens — Zoom (>10x)',
+                price: 10,
+                key: 'Lens Zoom'
+              });
             }
           });
-          // lens items
-          sel.lens.forEach(l => {
+
+          // Charger
+          items.push({
+            label: `Charger — ${charger.value}`,
+            price: getPriceFromOption(charger),
+            key: charger.value === 'USB-C' ? 'USB-C' : 'USB-C'
+          });
+
+          // Battery
+          items.push({
+            label: `Battery — ${battery.value}`,
+            price: getPriceFromOption(battery),
+            key: battery.value.includes('2000') ? 'Battery 2000' : 'Battery 2000'
+          });
+
+          // Shipping
+          const ship = form.shipping;
+          const shipVal = ship.value;
+          const shipKey = shipVal === 'Next Day' ? 'Shipping Next Day' : (shipVal.startsWith('Standard') ? 'Shipping Standard' : 'Pick up');
+          items.push({
+            label: `Shipping — ${shipVal}`,
+            price: getPriceFromOption(ship),
+            key: shipKey,
+            emphasized: true
+          });
+
+          return items;
+        }
+
+        function render() {
+          const items = selectionSummary();
+          let total = BASE;
+
+          itemized.innerHTML = '';
+          previews.innerHTML = '';
+
+          items.forEach(it => {
+            total += Number(it.price || 0);
+
+            // Itemized list entry
             const li = document.createElement('li');
-            li.setAttribute('data-gjs-name', 'Summary Selection Item');
-            li.className = 'flex items-center justify-between gap-3';
-            li.innerHTML = `<span data-gjs-name="Summary Selection Label" class="text-[#d7d7d7]">Lens: <strong data-gjs-name="Summary Selection Value" class="text-white">${l}</strong></span><span data-gjs-name="Summary Selection Cost" class="text-white/80">$${priceMap.lens[l]||0}</span>`;
-            summaryList.appendChild(li);
-            const q = imageMap[l];
-            if (q) {
+            li.setAttribute('data-gjs-name', 'Quote Item');
+            li.className = 'flex items-center justify-between gap-4';
+            const left = document.createElement('span');
+            left.setAttribute('data-gjs-name', 'Quote Item Label');
+            left.className = it.emphasized ? 'font-semibold text-white' : '';
+            left.textContent = it.label;
+            const right = document.createElement('span');
+            right.setAttribute('data-gjs-name', 'Quote Item Price');
+            right.className = 'text-white';
+            right.textContent = (it.price > 0 ? `+$${it.price}` : '$0');
+            li.appendChild(left);
+            li.appendChild(right);
+            itemized.appendChild(li);
+
+            // Preview thumb (skip if no mapping)
+            const src = previewMap[it.key];
+            if (src) {
               const fig = document.createElement('figure');
-              fig.setAttribute('data-gjs-name', 'Summary Image Item');
-              fig.className = 'bg-white/5 border border-white/10 rounded-md p-1';
-              fig.innerHTML = `
-              <img data-gjs-name="Summary Image Thumb" src="https://app.grapesjs.com/api/assets/random-image?query=${q}&w=160&h=120" alt="Lens - ${l}" class="w-full h-auto rounded object-cover" loading="lazy" width="160" height="120">
-              <figcaption data-gjs-name="Summary Image Caption" class="text-[10px] text-center mt-1 text-white/70">Lens</figcaption>`;
-              summaryImages.appendChild(fig);
+              fig.setAttribute('data-gjs-name', 'Preview Figure');
+              fig.className = 'flex flex-col gap-2';
+              const img = document.createElement('img');
+              img.setAttribute('data-gjs-name', 'Preview Image');
+              img.loading = 'lazy';
+              img.width = 300;
+              img.height = 200;
+              img.className = 'w-full h-auto rounded-md border border-[color:var(--gjs-t-color-accent)]/30 object-cover';
+              img.src = src;
+              img.alt = it.label;
+              const cap = document.createElement('figcaption');
+              cap.setAttribute('data-gjs-name', 'Preview Caption');
+              cap.className = 'text-[11px] text-center';
+              cap.textContent = it.label;
+              fig.appendChild(img);
+              fig.appendChild(cap);
+              previews.appendChild(fig);
             }
           });
+
+          totalPriceEl.textContent = `$${total}`;
+          return {
+            items,
+            total
+          };
         }
 
-        function buildEmail(sel, total) {
-          const name = (nameEl.value || '').trim();
-          const email = (emailEl.value || '').trim();
-          const phone = (phoneEl.value || '').trim();
-          const addr = (addrEl.value || '').trim();
+        function generateEmail() {
+          const {
+            items,
+            total
+          } = render();
+          const name = (document.getElementById('customerName').value || '').trim();
+          const email = (document.getElementById('customerEmail').value || '').trim();
+          const phone = (document.getElementById('customerPhone').value || '').trim();
+          const address = (document.getElementById('customerAddress').value || '').trim();
 
-          let body = '';
-          body += 'Penncamm MK1 — Quote Request%0A';
-          body += '------------------------------------%0A';
-          body += `Generation: GEN2%0A`;
-          body += `Lead time acknowledged: 0–14 days%0A%0A`;
-          body += `Selections:%0A`;
-          body += `- Wrap: ${sel.wrap}%0A`;
-          body += `- Accent: ${sel.accent}%0A`;
-          body += `- Case: ${sel.case}%0A`;
-          body += `- Storage: ${sel.storage}%0A`;
-          body += `- Storage Class: ${sel.storageClass}%0A`;
-          body += `- Lens: ${sel.lens.join(', ') || 'None'}%0A`;
-          body += `- Charger: ${sel.charger}%0A`;
-          body += `- Battery: ${sel.battery}%0A`;
-          body += `- Shipping: ${sel.shipping}%0A%0A`;
-          body += `Costs:%0A`;
-          body += `- Parts: $30%0A- Labor: $50%0A`;
-          body += `- Options total: $${total - 80}%0A`;
-          body += `= Estimated total: $${total}%0A%0A`;
-          body += `Contact:%0A`;
-          body += `- Name: ${name || 'N/A'}%0A`;
-          body += `- Email: ${email || 'N/A'}%0A`;
-          body += `- Phone: ${phone || 'N/A'}%0A`;
-          body += `- Address: ${addr ? addr.replace(/\n/g,'%0A') : 'N/A'}%0A%0A`;
-          body += `Please confirm availability and next steps.%0AThank you.`;
+          const lines = [];
+          lines.push('Penncamm MK1 — Build Request');
+          lines.push('');
+          lines.push('Selections:');
+          items.forEach(it => lines.push(`- ${it.label} ${it.price>0?`(+${it.price})`:''}`));
+          lines.push('');
+          lines.push(`Subtotal (incl. base $80): $${total}`);
+          lines.push('');
+          lines.push('Customer Info:');
+          lines.push(`Name: ${name||'-'}`);
+          lines.push(`Email: ${email||'-'}`);
+          lines.push(`Phone: ${phone||'-'}`);
+          lines.push('Address:');
+          lines.push(address || '-');
+          lines.push('');
+          lines.push('Please confirm lead time (0–14 days) and GEN2 availability.');
+          lines.push('');
+          lines.push('Thank you!');
 
-          const plain = decodeURIComponent(body).replace(/%0A/g, '\n');
-          emailTemplate.value = plain;
+          const body = lines.join('\n');
+          emailTemplate.value = body;
 
-          const subject = encodeURIComponent('Penncamm MK1 Quote Request');
-          const mailBody = body;
-          const to = 'cam@pennbrenn.com';
-          mailtoLink.href = `mailto:${to}?subject=${subject}&body=${mailBody}`;
+          const subject = `Penncamm MK1 Quote — ${name||'New Request'} — $${total}`;
+          const mailto = `mailto:cam@pennbrenn.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+          window.location.href = mailto;
         }
 
-        function update() {
-          const sel = getSelected();
-          const total = calcTotal(sel);
-          totalPriceEl.textContent = `Total: $${total}`;
-          renderSummary(sel);
-          buildEmail(sel, total);
-        }
-
-        form.addEventListener('change', update);
-        ['input', 'keyup'].forEach(ev => {
-          nameEl.addEventListener(ev, update);
-          emailEl.addEventListener(ev, update);
-          phoneEl.addEventListener(ev, update);
-          addrEl.addEventListener(ev, update);
+        form.addEventListener('change', render);
+        document.addEventListener('DOMContentLoaded', render);
+        generateBtn.addEventListener('click', generateEmail);
+        copyBtn.addEventListener('click', () => {
+          emailTemplate.select();
+          document.execCommand('copy');
         });
-
-        document.getElementById('copyTemplate').addEventListener('click', async () => {
-          try {
-            await navigator.clipboard.writeText(emailTemplate.value);
-            const btn = document.getElementById('copyTemplate');
-            const old = btn.textContent;
-            btn.textContent = 'Copied';
-            setTimeout(() => btn.textContent = old, 1200);
-          } catch (e) {}
-        });
-
-        update();
       })();
     </script>
   </body>
