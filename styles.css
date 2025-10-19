@@ -406,13 +406,6 @@ video {
   align-items: center;
 }
 
-.logo-image {
-  width: 2.25rem;
-  height: 2.25rem;
-  border-radius: 9999px;
-  object-fit: cover;
-}
-
 .main-content {
   max-width: 64rem;
   margin-left: auto;
@@ -1457,6 +1450,91 @@ video {
   color: rgb(255 255 255 / 0.6);
 }
 
+#i6k02 {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: rgba(12, 13, 15, 0.7);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#i6k02 .header-container {
+  max-width: 64rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+#i6k02 .brand-area {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+#i6k02 .brand-name {
+  font-family: "Courier New", monospace;
+  color: #ffffff;
+  letter-spacing: -0.025em;
+}
+
+#i6k02 .header-logo {
+  display: flex;
+  align-items: center;
+  color: var(--gjs-t-color-accent);
+}
+
+#i6k02 .header-logo img {
+  width: 36px;
+  height: 36px;
+}
+
+#i6k02 .primary-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+#i6k02 .primary-navigation a {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  font-family: Montserrat, sans-serif;
+  color: #d7d7d7;
+  border-bottom: 2px solid transparent;
+  transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 150ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#i6k02 .primary-navigation a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+#i6k02 .primary-navigation a.is-active {
+  color: var(--gjs-t-color-accent);
+  font-weight: 700;
+  border-color: var(--gjs-t-color-accent);
+}
+
+#imery {
+  font-family: Courier New, Courier, monospace;
+}
+
 @media (max-width: 992px) {
   .home-section {
     padding-top: 3rem;
@@ -1527,6 +1605,13 @@ video {
   .summary-images-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  #i6k02 .header-container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1566,5 +1651,13 @@ video {
 
   .summary-images-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  #i6k02 .primary-navigation {
+    gap: 0.5rem;
+  }
+
+  #i6k02 .brand-name {
+    font-size: 24px;
   }
 }
