@@ -17,19 +17,11 @@
     <meta name="description" content="Penncamm - Dont just capture content, capture memories>
     <script id="ig9zw1"> </script>
     <style>
-        /*
-        The initial state is defined on the #ieoim element itself.
-        The transition property tells the browser to animate the background-color
-        over a duration of 10 seconds whenever it changes.
-        */
         #ieoim {
-            /* Full viewport size */
             height: 100%;
             width: 100%;
-            /* Start color: #000000 (Black) */
             background-color: #000000;
-            /* The transition effect: 10 seconds duration */
-            transition: background-color 1s ease-in-out;
+            transition: background-color 10s ease-in-out;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -38,11 +30,6 @@
             font-family: 'Inter', sans-serif;
             text-align: center;
         }
-
-        /*
-        This class defines the end color: #465e73 (Blue-Gray).
-        The JavaScript toggles this class to create the loop.
-        */
         .bg-end-color {
             background-color: #465e73 !important;
         }
@@ -225,7 +212,7 @@
               I’m the creator of Penncamm—driven by a passion for honest tools and thoughtful design. I build each camera with care, aiming to simplify your shooting experience while giving you room to explore complexity when you need it.
             </p>
             <div id="ij67ei" class="about-action-container">
-              <a href="#buy" id="i9ydxk" class="gjs-t-button about-learn-more-button">Learn More</a>
+              <a href="www.pennbrenn.com" id="i9ydxk" class="gjs-t-button about-learn-more-button">Learn More</a>
             </div>
           </article>
         </section>
@@ -361,7 +348,7 @@
                 </div>
                 <div id="iy2va1" class="gjs-t-border example-previews-box">
                   <h3 id="itg5r1" class="example-previews-title">Example Previews</h3>
-                  <div id="previews" class="example-previews-grid"><!-- Dynamic example thumbnails inserted here --></div>
+                  <div id="previews" class="example-previews-grid"><!--ok--></div>
                 </div>
               </aside>
             </div>
@@ -380,14 +367,12 @@
       </footer>
     </div>
     <script id="ilr9jt">
-      // Year
-      document.getElementById('year').textContent = new Date().getFullYear();
 
-      // Typewriter effect
+      document.getElementById('year').textContent = new Date().getFullYear();
       (function typewriterInit() {
         const el = document.getElementById('typewriter');
         if (!el) return;
-        const phrases = ["Built For Simplicity", "Used For Complexity"];
+        const phrases = ["Built For Simplicity", "Used For Complexity"]; //WORD TUFF YEAH
         let pi = 0,
           ci = 0,
           dir = 1,
@@ -414,7 +399,6 @@
         setInterval(tick, 60);
       })();
 
-      // Nav active state on scroll with mapping for sections -> tabs
       (function navObserver() {
         const links = {
           home: document.querySelector('a[href="#home"]'),
@@ -455,7 +439,6 @@
         sections.forEach(sec => io.observe(sec));
       })();
 
-      // Quote calculator
       (function quote() {
         const BASE = 80; // 30 parts + 50 labor
         const form = document.getElementById('quoteForm');
