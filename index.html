@@ -676,4 +676,41 @@
     </script>
   </body>
 
+      <script>
+        // Get the element by its ID
+        const targetElement = document.getElementById('ieoim');
+        const END_COLOR_CLASS = 'bg-end-color';
+
+        /**
+         * Toggles the class to switch the background color, triggering the CSS transition.
+         * This function is called every time a transition finishes.
+         */
+        function toggleColor() {
+            if (targetElement.classList.contains(END_COLOR_CLASS)) {
+                // If the element has the end color class, remove it (fade back to black)
+                targetElement.classList.remove(END_COLOR_CLASS);
+            } else {
+                // If the element is black, add the class (fade to blue-gray)
+                targetElement.classList.add(END_COLOR_CLASS);
+            }
+        }
+
+        /**
+         * Wait for the page content to load, then start the loop.
+         */
+        window.onload = function() {
+            if (targetElement) {
+                // 1. Start the first transition immediately
+                toggleColor();
+
+                // 2. Set up the loop: whenever a transition ends, call toggleColor() again.
+                // This makes the transition loop infinitely and precisely.
+                targetElement.addEventListener('transitionend', toggleColor);
+
+            } else {
+                console.error("Target element with ID 'ieoim' not found.");
+            }
+        };
+    </script>
+  
 </html>
