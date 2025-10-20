@@ -683,42 +683,78 @@
         });
       })();
     </script>
-    <script id="ibt292">
-      // Get the element by its ID
-      const targetElement = document.getElementById('ieoim');
-      const END_COLOR_CLASS = 'bg-end-color';
 
-      /**
-       * Toggles the class to switch the background color, triggering the CSS transition.
-       * This function is called every time a transition finishes.
-       */
-      function toggleColor() {
-        if (targetElement.classList.contains(END_COLOR_CLASS)) {
-          // If the element has the end color class, remove it (fade back to black)
-          targetElement.classList.remove(END_COLOR_CLASS);
-        } else {
-          // If the element is black, add the class (fade to blue-gray)
-          targetElement.classList.add(END_COLOR_CLASS);
+    <style>
+        /*
+        The initial state is defined on the #ieoim element itself.
+        The transition property tells the browser to animate the background-color
+        over a duration of 10 seconds whenever it changes.
+        */
+        #ieoim {
+            /*
+            Changed to min-height to allow scrolling when content exceeds the viewport.
+            It still ensures the background covers the whole screen if content is short.
+            */
+            min-height: 100vh;
+            width: 100%; /* Using 100% instead of 100vw for better scroll behavior */
+            /* Start color: #000000 (Black) */
+            background-color: #000000;
+            /* The transition effect: 10 seconds duration */
+            transition: background-color 10s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: white;
+            font-family: 'Inter', sans-serif;
+            text-align: center;
         }
-      }
 
-      /**
-       * Wait for the page content to load, then start the loop.
-       */
-      window.onload = function() {
-        if (targetElement) {
-          // 1. Start the first transition immediately
-          toggleColor();
-
-          // 2. Set up the loop: whenever a transition ends, call toggleColor() again.
-          // This makes the transition loop infinitely and precisely.
-          targetElement.addEventListener('transitionend', toggleColor);
-
-        } else {
-          console.error("Target element with ID 'ieoim' not found.");
+        /*
+        This class defines the end color: #465e73 (Blue-Gray).
+        The JavaScript toggles this class to create the loop.
+        */
+        .bg-end-color {
+            background-color: #465e73 !important;
         }
-      };
+    </style>
+    <script>
+        // Get the element by its ID
+        const targetElement = document.getElementById('ieoim');
+        const END_COLOR_CLASS = 'bg-end-color';
+
+        /**
+         * Toggles the class to switch the background color, triggering the CSS transition.
+         * This function is called every time a transition finishes.
+         */
+        function toggleColor() {
+            if (targetElement.classList.contains(END_COLOR_CLASS)) {
+                // If the element has the end color class, remove it (fade back to black)
+                targetElement.classList.remove(END_COLOR_CLASS);
+            } else {
+                // If the element is black, add the class (fade to blue-gray)
+                targetElement.classList.add(END_COLOR_CLASS);
+            }
+        }
+
+        /**
+         * Wait for the page content to load, then start the loop.
+         */
+        window.onload = function() {
+            if (targetElement) {
+                // 1. Start the first transition immediately
+                toggleColor();
+
+                // 2. Set up the loop: whenever a transition ends, call toggleColor() again.
+                // This makes the transition loop infinitely and precisely.
+                targetElement.addEventListener('transitionend', toggleColor);
+
+            } else {
+                console.error("Target element with ID 'ieoim' not found.");
+            }
+        };
     </script>
+    
   </body>
 
 </html>
