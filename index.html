@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
+  
   <head id="ivy8">
     <title id="iw8ykk">Penncamm</title>
     <meta charset="utf-8" id="i09q05" />
@@ -14,6 +16,37 @@
     <link rel="stylesheet" type="text/css" href="index.css">
     <meta name="description" content="Penncamm - Dont just capture content, capture memories>
     <script id="ig9zw1"> </script>
+    <style>
+        /*
+        The initial state is defined on the #ieoim element itself.
+        The transition property tells the browser to animate the background-color
+        over a duration of 10 seconds whenever it changes.
+        */
+        #ieoim {
+            /* Full viewport size */
+            height: 100vh;
+            width: 100vw;
+            /* Start color: #000000 (Black) */
+            background-color: #000000;
+            /* The transition effect: 10 seconds duration */
+            transition: background-color 10s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: white;
+            font-family: 'Inter', sans-serif;
+            text-align: center;
+        }
+
+        /*
+        This class defines the end color: #465e73 (Blue-Gray).
+        The JavaScript toggles this class to create the loop.
+        */
+        .bg-end-color {
+            background-color: #465e73 !important;
+        }
+    </style>
   </head>
 
   <body id="i9ot" class="gjs-t-body body-root">
