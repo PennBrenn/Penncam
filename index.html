@@ -323,9 +323,9 @@
                   <hr id="in4hu9" class="quote-divider" />
                   <div id="ikw6e2" class="quote-total-row">
                     <span id="i16gjc" class="quote-total-label">Total</span>
-                    <strong id="totalPrice" class="quote-total-value">$45</strong>
+                    <strong id="totalPrice" class="quote-total-value">$55</strong>
                   </div>
-                  <small id="i93c7f" class="quote-note">Includes $5 parts + $40 labor before options.</small>
+                  <small id="i93c7f" class="quote-note">Includes $15 parts + $40 labor before options.</small>
                 </div>
                 <div id="i6v6vp" class="form-actions">
                   <button type="button" id="generateQuote" class="gjs-t-button form-button-generate-quote">Generate Quote &amp; Email</button>
@@ -433,7 +433,7 @@
 
       // Quote calculator
       (function quote() {
-        const BASE = 45; // 30 parts + 50 labor
+        const BASE = 55; // 30 parts + 50 labor
         const form = document.getElementById('quoteForm');
         const itemized = document.getElementById('itemized');
         const totalPriceEl = document.getElementById('totalPrice');
@@ -654,7 +654,7 @@
           lines.push('Selections:');
           items.forEach(it => lines.push(`- ${it.label} ${it.price>0?`(+${it.price})`:''}`));
           lines.push('');
-          lines.push(`Subtotal (incl. base $45): $${total}`);
+          lines.push(`Subtotal (incl. base $55): $${total}`);
           lines.push('');
           lines.push('Customer Info:');
           lines.push(`Name: ${name||'-'}`);
