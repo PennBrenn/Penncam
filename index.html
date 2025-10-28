@@ -16,44 +16,40 @@
   <meta name="description" content="Penncamm - Dont just capture content, capture memories" />
   <link rel="stylesheet" href="index.css" />
   <!--bg color-->
-    <style>
-    :root{
-      --color-a: #090e12;
+  <style>
+    :root {
+      --color-a: #000000;
       --color-b: #465e73;
     }
 
-    html,body{
-      height: 100%;
-      margin: 0;
+    html {
+      min-height: 100%;
+      background-color: var(--color-a);
+      animation: bgColorShift 10s linear infinite alternate;
     }
 
-    /* Keyframes from black to target color */
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      color: white;
+      min-height: 100vh;
+    }
+
     @keyframes bgColorShift {
       from { background-color: var(--color-a); }
       to   { background-color: var(--color-b); }
     }
 
-    /* --- Default: 10s to go from A → B, then 10s back (alternate ping-pong) --- */
-    body{
-      min-height: 100%;
-      display: grid;
-      place-items: center;
-      color: white;
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      animation: bgColorShift 10s linear infinite alternate;
-    }
-
-    /* If you prefer a one-way 10s animation that instantly jumps back and repeats,
-       replace the body rule above with this:
-    body {
-      animation: bgColorShift 10s steps(1,end) infinite;
-    }
-    (Uncomment and use that instead — but the ping-pong version looks smoother.)
-    */
-
-    /* Respect user motion preferences */
+    /* Optional: Respect reduced motion */
     @media (prefers-reduced-motion: reduce) {
-      body { animation: none; background-color: var(--color-a); }
+      html { animation: none; background-color: var(--color-a); }
+    }
+
+    main {
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem;
+      line-height: 1.6;
     }
   </style>
 </head>
@@ -498,5 +494,6 @@
   </script>
 </body>
 </html>
+
 
 
