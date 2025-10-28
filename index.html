@@ -26,106 +26,149 @@ gtag('config', 'G-VV5DY5JBSZ');
     <a href="#about">About</a>
     <a href="#buy">Buy</a>
     <a href="#legal">Legal</a>
+    <a href="https://www.pennbrenn.com" target="_blank">Webring</a>
+    <img src="favicon96.png" alt="Logo" style="width:40px; margin-left:10px;">
   </nav>
-  <div>
-    <img src="favicon96.png" class="logo" />
-    <button onclick="window.open('https://www.pennbrenn.com')">Webring</button>
-  </div>
 </header>
 
 <section id="home">
-  <div class="glass">
-    <h1>Penncamm</h1>
-    <img src="penncammcam.png" alt="Camera">
-    <p>Don't just capture content, capture memories.</p>
-  </div>
+  <h2>Penncamm</h2>
+  <img src="penncammcam.png" alt="Penncamm Camera">
+  <p>Don't just capture content, capture memories.</p>
 </section>
 
 <section id="samples">
-  <div class="glass sample-photos">
-    <img src="sam.png" alt="Standard">
-    <img src="sam.png" alt="Fisheye">
-    <img src="sam.png" alt="Macro">
-    <img src="sam.png" alt="Zoom">
-  </div>
+  <h2>Sample Photos</h2>
+  <img src="sam.png" alt="Standard">
+  <img src="sam.png" alt="Fisheye">
+  <img src="sam.png" alt="Macro">
+  <img src="sam.png" alt="Zoom">
 </section>
 
 <section id="features">
-  <div class="glass features">
-    <div class="feature-item"><h3>Build Durability</h3><p>A stainless steel or reinforced plastic frame ensures durability in every moment.</p></div>
-    <div class="feature-item"><h3>Display</h3><p>A high-definition display lets you see your memories as they were meant to be seen.</p></div>
-    <div class="feature-item"><h3>Ergonomics</h3><p>A textured, non-slip leather or foam grip ensures secure, comfortable handling.</p></div>
-    <div class="feature-item"><h3>Repairability</h3><p>With a lifetime warranty, you can be reassured that you'll have every moment.</p></div>
-    <div class="feature-item"><h3>Sensor</h3><p>An 8MP sensor with 1080p video allows every moment to be captured with clear, vivid detail.</p></div>
-    <div class="feature-item"><h3>Battery</h3><p>Up to a 2000mAh battery gives you extended time to get every detail without interruption.</p></div>
-    <div class="feature-item"><h3>Interface</h3><p>With minimal controls, capturing memories becomes second nature.</p></div>
-    <div class="feature-item"><h3>Flash</h3><p>A strong flash, combined with the camera's auto exposure, lets every moment be lit.</p></div>
-  </div>
+  <h2>Features</h2>
+  <div class="features-item"><strong>Build Durability:</strong> Stainless steel or reinforced plastic frame.</div>
+  <div class="features-item"><strong>Display:</strong> High-definition display.</div>
+  <div class="features-item"><strong>Ergonomics:</strong> Textured non-slip leather or foam grip.</div>
+  <div class="features-item"><strong>Repairability:</strong> Lifetime warranty.</div>
+  <div class="features-item"><strong>Sensor:</strong> 8MP 1080p video.</div>
+  <div class="features-item"><strong>Battery:</strong> Up to 2000mAh.</div>
+  <div class="features-item"><strong>Interface:</strong> Minimal controls.</div>
+  <div class="features-item"><strong>Flash:</strong> Strong auto-exposure flash.</div>
 </section>
 
 <section id="about">
-  <div class="glass">
-    <p>Basic about me (edit later)</p>
-    <a href="https://www.pennbrenn.com" target="_blank">Learn more</a>
-  </div>
+  <h2>About Me</h2>
+  <p>Basic about me (editable later).</p>
+  <button onclick="window.location.href='https://www.pennbrenn.com'">Learn More</button>
 </section>
 
 <section id="buy">
-  <div class="glass">
-    <h2>Estimate Generator</h2>
-    <form id="estimateForm">
-      <!-- JS will populate dropdowns -->
-    </form>
-    <h3>Total: $<span id="totalPrice">0</span></h3>
-    <textarea id="emailPreview" rows="6" placeholder="Preview of email..."></textarea>
-    <button onclick="copyEmail()">Copy Email</button>
-  </div>
+  <h2>Buy / Estimate Generator</h2>
+  <form id="estimateForm">
+    <label for="wrap">Wrap:</label>
+    <select id="wrap" multiple></select>
+
+    <label for="accent">Accent:</label>
+    <select id="accent" multiple></select>
+
+    <label for="case">Case:</label>
+    <select id="case" multiple></select>
+
+    <label for="storage">Storage:</label>
+    <select id="storage"></select>
+
+    <label for="lens">Lens:</label>
+    <select id="lens" multiple></select>
+
+    <label for="charger">Charger:</label>
+    <select id="charger"></select>
+
+    <label for="battery">Battery:</label>
+    <select id="battery"></select>
+
+    <label for="emailMsg">Additional Message:</label>
+    <textarea id="emailMsg" rows="4" placeholder="Questions? Phone number?"></textarea>
+
+    <button type="button" onclick="generateEmail()">Generate Email</button>
+  </form>
+
+  <h3>Email Preview</h3>
+  <textarea id="emailPreview" rows="10" readonly></textarea>
 </section>
 
 <section id="legal">
-  <div class="glass">
-    <button onclick="window.location.href='./legal.html'">Legal</button>
-  </div>
+  <h2>Legal</h2>
+  <button onclick="window.location.href='./legal.html'">View Legal</button>
 </section>
 
-<script src="Options.json" type="application/json" id="optionsData"></script>
+<footer></footer>
+
 <script>
-let options = {};
-fetch('options.json').then(res => res.json()).then(data => {
-  options = data;
-  populateForm();
+let optionsData;
+fetch('options.json').then(r=>r.json()).then(data=>{
+  optionsData = data;
+  function populateSelect(id, obj) {
+    const sel = document.getElementById(id);
+    for (const key in obj) {
+      if (typeof obj[key] === 'number') continue;
+      for (const opt in obj[key]) {
+        const o = document.createElement('option');
+        o.value = key + ': ' + opt;
+        o.text = opt + ' ($' + obj[key][opt] + ')';
+        sel.add(o);
+      }
+    }
+  }
+  populateSelect('wrap', optionsData.Wrap);
+  populateSelect('accent', optionsData.Accent);
+  populateSelect('case', optionsData.Case);
+  populateSelect('storage', optionsData.Storage);
+  populateSelect('lens', optionsData.Lens);
+  populateSelect('charger', optionsData.Charger);
+  populateSelect('battery', optionsData.Battery);
 });
 
-function populateForm(){
-  const form = document.getElementById('estimateForm');
-  for(const category in options){
-    if(category==="PartsPrice" || category==="Labor" || category==="LeadTime") continue;
-    const div = document.createElement('div');
-    div.innerHTML = `<label>${category}</label><select multiple id="${category}"></select>`;
-    form.appendChild(div);
-    const select = div.querySelector('select');
-    for(const item in options[category]){
-      const price = options[category][item];
-      const opt = document.createElement('option');
-      opt.value = item;
-      opt.text = `${item} ($${price})`;
-      select.appendChild(opt);
-    }
-    select.addEventListener('change', updateTotal);
-  }
-  updateTotal();
-}
+function generateEmail(){
+  let form = document.getElementById('estimateForm');
+  let selections = [];
+  let price = optionsData.Parts + optionsData.Labor;
 
-function updateTotal(){
-  let total = options.PartsPrice + options.Labor;
-  const emailText = [];
-  for(const category in options){
-    if(category==="PartsPrice" || category==="Labor" || category==="LeadTime") continue;
-    const select = document.getElementById(category);
-    const selected = Array.from(select.selectedOptions).map(o=>o.value);
-    selected.forEach(item=>{
-      total += options[category][item];
-      emailText.push(`${category}: ${item} ($${options[category][item]})`);
+  function addSelect(id, obj) {
+    const sel = document.getElementById(id);
+    Array.from(sel.selectedOptions).forEach(opt=>{
+      const [cat,name] = opt.value.split(': ');
+      selections.push(cat + ' - ' + name + ': $' + obj[cat][name]);
+      price += obj[cat][name];
     });
   }
+  addSelect('wrap', optionsData.Wrap);
+  addSelect('accent', optionsData.Accent);
+  addSelect('case', optionsData.Case);
+  addSelect('storage', optionsData.Storage);
+  addSelect('lens', optionsData.Lens);
+  addSelect('charger', optionsData.Charger);
+  addSelect('battery', optionsData.Battery);
 
+  let msg = document.getElementById('emailMsg').value;
+
+  let emailContent = `To: cam@pennbrenn.com\nSubject: Penncamm Estimate Request\n\nSelected Options:\n${selections.join('\n')}\n\nParts: $${optionsData.Parts}\nLabor: $${optionsData.Labor}\nTotal: $${price}\n\nLead Time: Up to 1 month\n\nAdditional Message:\n${msg}`;
+
+  document.getElementById('emailPreview').value = emailContent;
+}
+
+/* Active section highlight */
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('header nav a');
+window.addEventListener('scroll',()=>{
+  let fromTop = window.scrollY + 80;
+  sections.forEach((sec,i)=>{
+    if(sec.offsetTop <= fromTop && sec.offsetTop + sec.offsetHeight > fromTop){
+      navLinks.forEach(a=>a.classList.remove('active'));
+      navLinks[i].classList.add('active');
+    }
+  });
+});
+</script>
+</body>
+</html>
