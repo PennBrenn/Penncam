@@ -1,65 +1,128 @@
 {
-  "wrap": [
-    {"name":"Real Leather — Tan","price":45},
-    {"name":"Real Leather — Black","price":45},
-    {"name":"Real Leather — Brown","price":45},
-    {"name":"Foam — Black","price":12},
-    {"name":"Foam — White","price":12},
-    {"name":"Foam — Red","price":12},
-    {"name":"Foam — Blue","price":12},
-    {"name":"Foam — Green","price":12},
-    {"name":"Foam — Pink","price":12}
+  "categories": [
+    {
+      "id": "wrap",
+      "label": "Wrap",
+      "type": "single",
+      "options": [
+        {"id":"wrap_real_leather","name":"Real Leather - Tan","price":60},
+        {"id":"wrap_real_leather_black","name":"Real Leather - Black","price":60},
+        {"id":"wrap_foam_black","name":"Foam - Black","price":20},
+        {"id":"wrap_foam_white","name":"Foam - White","price":20},
+        {"id":"wrap_multicolor","name":"Multicolor","price":45}
+      ]
+    },
+    {
+      "id": "frame_material",
+      "label": "Frame / Metal",
+      "type": "single",
+      "options": [
+        {"id":"metal_steel","name":"Steel","price":35},
+        {"id":"metal_titanium","name":"Titanium","price":120},
+        {"id":"metal_brass","name":"Brass","price":45},
+        {"id":"metal_copper","name":"Copper","price":45},
+        {"id":"metal_gold","name":"Gold (plated)","price":200}
+      ]
+    },
+    {
+      "id": "body_plastic",
+      "label": "Plastic / Body",
+      "type": "single",
+      "options": [
+        {"id":"plastic_clear","name":"Clear","price":25},
+        {"id":"plastic_black","name":"Black","price":20},
+        {"id":"plastic_white","name":"White","price":20},
+        {"id":"plastic_color","name":"Colored Plastic","price":30}
+      ]
+    },
+    {
+      "id": "silicone",
+      "label": "Silicone Options",
+      "type": "single",
+      "options": [
+        {"id":"sil_black","name":"Black Silicone","price":12},
+        {"id":"sil_red","name":"Red Silicone","price":12},
+        {"id":"sil_blue","name":"Blue Silicone","price":12},
+        {"id":"sil_clear","name":"Clear Silicone","price":15}
+      ]
+    },
+    {
+      "id": "fiber",
+      "label": "Fiber / Composite",
+      "type": "single",
+      "options": [
+        {"id":"carb","name":"Carbon Fiber","price":80},
+        {"id":"fiberglass","name":"Fiberglass","price":50},
+        {"id":"reflective","name":"Reflective","price":35}
+      ]
+    },
+    {
+      "id": "accent",
+      "label": "Accent",
+      "type": "single",
+      "options": [
+        {"id":"accent_leather","name":"Real Leather Accent","price":25},
+        {"id":"accent_metal","name":"Metal Accent","price":30},
+        {"id":"accent_color","name":"Color Accent","price":18}
+      ]
+    },
+    {
+      "id": "case",
+      "label": "Case",
+      "type": "single",
+      "options": [
+        {"id":"case_titanium","name":"Metal Case - Titanium","price":150},
+        {"id":"case_brass","name":"Brass Case","price":80},
+        {"id":"case_plastic","name":"Plastic Case","price":25},
+        {"id":"case_multicolor","name":"Multicolor Case","price":40}
+      ]
+    },
+    {
+      "id": "storage",
+      "label": "Storage",
+      "type": "single",
+      "options": [
+        {"id":"none","name":"None","price":0},
+        {"id":"16gb","name":"16GB (~1h | ~200 photos)","price":8},
+        {"id":"32gb","name":"32GB (~3h)","price":12},
+        {"id":"64gb","name":"64GB (~6h)","price":20},
+        {"id":"128gb","name":"128GB (~12h)","price":35},
+        {"id":"256gb","name":"256GB (~32h)","price":60}
+      ]
+    },
+    {
+      "id": "lens",
+      "label": "Lens (select all that apply)",
+      "type": "multi",
+      "options": [
+        {"id":"lens_basic","name":"Basic","price":0},
+        {"id":"lens_macro","name":"Macro","price":40},
+        {"id":"lens_fisheye","name":"Fisheye","price":55},
+        {"id":"lens_zoom","name":"Zoom (>10x)","price":120}
+      ]
+    },
+    {
+      "id": "charger",
+      "label": "Charger",
+      "type": "single",
+      "options": [
+        {"id":"none_charger","name":"None (Use own)","price":0},
+        {"id":"usb_c","name":"USB-C Charger","price":15}
+      ]
+    },
+    {
+      "id": "battery",
+      "label": "Battery",
+      "type": "single",
+      "options": [
+        {"id":"bat_2000","name":"2000mAh (>6h)","price":25},
+        {"id":"bat_380","name":"380mAh (>3h)","price":12}
+      ]
+    }
   ],
-  "material": [
-    {"name":"Metal — Steel","price":60},
-    {"name":"Metal — Titanium","price":150},
-    {"name":"Metal — Iron (rusts)","price":40},
-    {"name":"Metal — Brass","price":70},
-    {"name":"Metal — Copper","price":70},
-    {"name":"Metal — Gold","price":250},
-    {"name":"Plastic — Multicolor","price":15},
-    {"name":"Plastic — Clear","price":10},
-    {"name":"Plastic — Black","price":10}
-  ],
-  "accent": [
-    {"name":"Reflective","price":18},
-    {"name":"Real Leather Accent — Black","price":35},
-    {"name":"Real Leather Accent — Tan","price":35},
-    {"name":"Carbon Fiber Accent","price":40},
-    {"name":"Fibre — Fiberglass","price":30}
-  ],
-  "case": [
-    {"name":"Case — Steel","price":90},
-    {"name":"Case — Titanium","price":220},
-    {"name":"Case — Plastic — Black","price":25},
-    {"name":"Case — Leather","price":60},
-    {"name":"Case — Clear","price":35}
-  ],
-  "colorfade": [
-    {"name":"Clear","price":0},
-    {"name":"Subtle fade","price":12},
-    {"name":"Heavy fade","price":25}
-  ],
-  "storage": [
-    {"name":"None","price":0},
-    {"name":"16GB (~1h|200 photos)","price":8},
-    {"name":"32GB (~3h|600 photos)","price":12},
-    {"name":"64GB (~6h|1200 photos)","price":20},
-    {"name":"128GB (~12h|2400 photos)","price":35},
-    {"name":"256GB (~32h|6000 photos)","price":60}
-  ],
-  "lens": [
-    {"name":"Basic","price":0},
-    {"name":"Macro","price":25},
-    {"name":"Fisheye","price":30},
-    {"name":"Zoom (>10x)","price":80}
-  ],
-  "charger": [
-    {"name":"None (Use own)","price":0},
-    {"name":"USB-C","price":12}
-  ],
-  "battery": [
-    {"name":"2000mAh (>6h)","price":25},
-    {"name":"380mAh (>3h)","price":12}
-  ]
+  "flat_fees": {
+    "parts": 15,
+    "labor": 40,
+    "lead_time": "Up to 1 month"
+  }
 }
