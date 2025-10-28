@@ -199,7 +199,7 @@ function elt(tag, cls){ const e=document.createElement(tag); if(cls) e.className
 let OPTIONS = {};
 async function loadOptions(){
   try{
-    const res = await fetch('Options.json', {cache: 'no-store'});
+    const res = await fetch('options.json', {cache: 'no-store'});
     OPTIONS = await res.json();
     renderOptions();
   }catch(e){
@@ -403,4 +403,5 @@ loadOptions();
 
 </body>
 </html>
+
 
