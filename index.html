@@ -13,7 +13,7 @@ gtag('config', 'G-VV5DY5JBSZ');
 </script>
 <title>Penncamm</title>
 <link rel="icon" type="image/png" href="favicon96.png" />
-<link rel="stylesheet" href="Index.css">
+<link rel="stylesheet" href="index.css">
 </head>
 <body>
 
@@ -91,7 +91,7 @@ gtag('config', 'G-VV5DY5JBSZ');
 <script src="Options.json" type="application/json" id="optionsData"></script>
 <script>
 let options = {};
-fetch('Options.json').then(res => res.json()).then(data => {
+fetch('options.json').then(res => res.json()).then(data => {
   options = data;
   populateForm();
 });
@@ -128,3 +128,4 @@ function updateTotal(){
       emailText.push(`${category}: ${item} ($${options[category][item]})`);
     });
   }
+
