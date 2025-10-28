@@ -1,407 +1,130 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VV5DY5JBSZ"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-VV5DY5JBSZ');
-  </script>
-
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Penncamm</title>
-  <link rel="icon" type="image/png" href="favicon96.png" id="i5zs8q" />
-  <meta name="description" content="Penncamm - Don't just capture content, capture memories" />
-  <link rel="stylesheet" href="index.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VV5DY5JBSZ"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-VV5DY5JBSZ');
+</script>
+<title>Penncamm</title>
+<link rel="icon" type="image/png" href="favicon96.png" />
+<link rel="stylesheet" href="Index.css">
 </head>
 <body>
 
-  <header id="site-header" class="site-header">
-    <div class="header-left">Penncamm</div>
-    <nav class="header-nav" id="header-nav" aria-label="Primary">
-      <a href="#home" class="nav-link active">Home</a>
-      <a href="#samples" class="nav-link">Samples</a>
-      <a href="#features" class="nav-link">Features</a>
-      <a href="#about" class="nav-link">About</a>
-      <a href="#buy" class="nav-link">Buy</a>
-      <a href="#legal" class="nav-link">Legal</a>
-    </nav>
-    <div class="header-right">
-      <img src="favicon96.png" alt="Penncamm logo" class="logo" />
-      <a class="webring-btn" href="https://www.pennbrenn.com" target="_blank" rel="noopener">Pennbrenn Webring</a>
-    </div>
-  </header>
+<header>
+  <h1>Penncamm</h1>
+  <nav>
+    <a href="#home" class="active">Home</a>
+    <a href="#samples">Samples</a>
+    <a href="#features">Features</a>
+    <a href="#about">About</a>
+    <a href="#buy">Buy</a>
+    <a href="#legal">Legal</a>
+  </nav>
+  <div>
+    <img src="favicon96.png" class="logo" />
+    <button onclick="window.open('https://www.pennbrenn.com')">Webring</button>
+  </div>
+</header>
 
-  <main id="main" class="main">
-    <!-- Home Section (full screen) -->
-    <section id="home" class="section pane hero" data-title="Home">
-      <div class="glass">
-        <h1 class="title">Penncamm</h1>
-        <img src="penncammcam.png" alt="Penncamm camera" class="hero-image" />
-        <p class="lead">Don't just capture content, capture memories.</p>
-      </div>
-    </section>
+<section id="home">
+  <div class="glass">
+    <h1>Penncamm</h1>
+    <img src="penncammcam.png" alt="Camera">
+    <p>Don't just capture content, capture memories.</p>
+  </div>
+</section>
 
-    <!-- Samples -->
-    <section id="samples" class="section pane" data-title="Samples">
-      <div class="glass small-gap">
-        <h2 class="section-title">Sample Photos</h2>
-        <div class="sample-grid">
-          <figure><img src="sample1.png" alt="Standard sample" /><figcaption>Standard</figcaption></figure>
-          <figure><img src="sample2.png" alt="Fisheye sample" /><figcaption>Fisheye</figcaption></figure>
-          <figure><img src="sample3.png" alt="Macro sample" /><figcaption>Macro</figcaption></figure>
-          <figure><img src="sample4.png" alt="Zoom sample" /><figcaption>Zoom</figcaption></figure>
-        </div>
-      </div>
-    </section>
+<section id="samples">
+  <div class="glass sample-photos">
+    <img src="sam.png" alt="Standard">
+    <img src="sam.png" alt="Fisheye">
+    <img src="sam.png" alt="Macro">
+    <img src="sam.png" alt="Zoom">
+  </div>
+</section>
 
-    <!-- Features -->
-    <section id="features" class="section pane" data-title="Features">
-      <div class="glass">
-        <h2 class="section-title">Features</h2>
+<section id="features">
+  <div class="glass features">
+    <div class="feature-item"><h3>Build Durability</h3><p>A stainless steel or reinforced plastic frame ensures durability in every moment.</p></div>
+    <div class="feature-item"><h3>Display</h3><p>A high-definition display lets you see your memories as they were meant to be seen.</p></div>
+    <div class="feature-item"><h3>Ergonomics</h3><p>A textured, non-slip leather or foam grip ensures secure, comfortable handling.</p></div>
+    <div class="feature-item"><h3>Repairability</h3><p>With a lifetime warranty, you can be reassured that you'll have every moment.</p></div>
+    <div class="feature-item"><h3>Sensor</h3><p>An 8MP sensor with 1080p video allows every moment to be captured with clear, vivid detail.</p></div>
+    <div class="feature-item"><h3>Battery</h3><p>Up to a 2000mAh battery gives you extended time to get every detail without interruption.</p></div>
+    <div class="feature-item"><h3>Interface</h3><p>With minimal controls, capturing memories becomes second nature.</p></div>
+    <div class="feature-item"><h3>Flash</h3><p>A strong flash, combined with the camera's auto exposure, lets every moment be lit.</p></div>
+  </div>
+</section>
 
-        <div class="features-grid">
-          <div>
-            <h3>Build & Durability</h3>
-            <p>A stainless steel or reinforced plastic frame ensures durability in every moment.</p>
+<section id="about">
+  <div class="glass">
+    <p>Basic about me (edit later)</p>
+    <a href="https://www.pennbrenn.com" target="_blank">Learn more</a>
+  </div>
+</section>
 
-            <h3>Display</h3>
-            <p>A high-definition display lets you see your memories as they were meant to be seen.</p>
-          </div>
+<section id="buy">
+  <div class="glass">
+    <h2>Estimate Generator</h2>
+    <form id="estimateForm">
+      <!-- JS will populate dropdowns -->
+    </form>
+    <h3>Total: $<span id="totalPrice">0</span></h3>
+    <textarea id="emailPreview" rows="6" placeholder="Preview of email..."></textarea>
+    <button onclick="copyEmail()">Copy Email</button>
+  </div>
+</section>
 
-          <div>
-            <h3>Ergonomics</h3>
-            <p>A textured, non-slip leather or foam grip ensures secure, comfortable handling.</p>
+<section id="legal">
+  <div class="glass">
+    <button onclick="window.location.href='./legal.html'">Legal</button>
+  </div>
+</section>
 
-            <h3>Repairability</h3>
-            <p>With a lifetime warranty, you can be reassured that you'll have every moment.</p>
-          </div>
-
-          <div>
-            <h3>Technology</h3>
-            <p><strong>Sensor</strong> — An 8MP sensor with 1080p video allows every moment to be captured with vivid detail.</p>
-            <p><strong>Battery</strong> — Up to a 2000mAh battery gives you extended time.</p>
-            <p><strong>Interface</strong> — Minimal controls for intuitive capture.</p>
-            <p><strong>Flash</strong> — Strong flash + auto exposure for lit moments.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="section pane" data-title="About">
-      <div class="glass">
-        <h2 class="section-title">About</h2>
-        <p class="lead">Basic about me (you can edit this later).</p>
-        <p><a class="learn-more" href="https://www.pennbrenn.com" target="_blank" rel="noopener">Learn more at pennbrenn.com</a></p>
-      </div>
-    </section>
-
-    <!-- Buy / Estimate Generator -->
-    <section id="buy" class="section pane" data-title="Buy">
-      <div class="glass">
-        <h2 class="section-title">Build & Estimate</h2>
-        <p class="muted">We offer individually quoted cameras. Use the selector below to build an estimate. Lead time: up to <strong>1 month</strong>.</p>
-
-        <div class="estimate-grid">
-          <form id="estimate-form" class="estimate-form" novalidate>
-            <div class="form-column">
-
-              <label class="field-label">Wrap</label>
-              <div id="wrap-container" class="option-scroll"></div>
-
-              <label class="field-label">Accent</label>
-              <div id="accent-container" class="option-scroll"></div>
-
-              <label class="field-label">Case</label>
-              <div id="case-container" class="option-scroll"></div>
-
-              <label class="field-label">Storage</label>
-              <select id="storage-select" class="select">
-                <option value="">Loading...</option>
-              </select>
-
-            </div>
-
-            <div class="form-column">
-
-              <label class="field-label">Lens (select any)</label>
-              <div id="lens-container" class="option-scroll"></div>
-
-              <label class="field-label">Charger</label>
-              <div id="charger-container" class="option-scroll"></div>
-
-              <label class="field-label">Battery</label>
-              <div id="battery-container" class="option-scroll"></div>
-
-              <label class="field-label">Additional notes / contact</label>
-              <input type="text" id="user-name" placeholder="Your name (optional)" class="text" />
-              <input type="email" id="user-email" placeholder="Your email (optional)" class="text" />
-              <input type="tel" id="user-phone" placeholder="Phone (optional)" class="text" />
-            </div>
-
-          </form>
-        </div>
-
-        <div class="estimate-actions">
-          <div class="price-summary" id="price-summary">Total: $0.00 (includes $15 parts + $40 labor)</div>
-          <textarea id="email-preview" class="email-preview" rows="8">
-Estimate request from (edit before sending)...
-
-</textarea>
-          <div class="button-row">
-            <button id="generate-email" class="btn">Generate Email</button>
-            <button id="copy-preview" class="btn secondary">Copy Preview</button>
-            <a id="mailto-link" class="btn tertiary" href="#" target="_blank" rel="noopener">Open in email client</a>
-          </div>
-          <p class="muted small">Note: This creates an email body you can copy/paste or open with your mail client. Price placeholders are editable in options.json on the server.</p>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Legal -->
-    <section id="legal" class="section pane" data-title="Legal">
-      <div class="glass">
-        <h2 class="section-title">Legal</h2>
-        <p>Terms and legal info can be found at <a href="./legal.html">Legal page</a>.</p>
-        <button class="btn" onclick="location.href='./legal.html'">Open Legal</button>
-      </div>
-    </section>
-
-    <footer class="site-footer">
-      <p>© Penncamm — Handmade digital cameras built to last.</p>
-    </footer>
-  </main>
-
+<script src="Options.json" type="application/json" id="optionsData"></script>
 <script>
-/* ---------------------------
-  Configuration / constants
-----------------------------*/
-const ACCENT = '#465e73';
-const PARTS_PRICE = 15;
-const LABOR_PRICE = 40;
-const EMAIL_TO = 'cam@pennbrenn.com';
-const LEAD_TIME_TEXT = 'Lead time: up to 1 month.';
-
-/* ---------------------------
-  Utility helpers
-----------------------------*/
-function money(n){ return '$' + Number(n).toFixed(2); }
-function elt(tag, cls){ const e=document.createElement(tag); if(cls) e.className=cls; return e; }
-
-/* ---------------------------
-  Load options.json and render options
-----------------------------*/
-let OPTIONS = {};
-async function loadOptions(){
-  try{
-    const res = await fetch('options.json', {cache: 'no-store'});
-    OPTIONS = await res.json();
-    renderOptions();
-  }catch(e){
-    console.error('Failed to load Options.json', e);
-    // fallback minimal
-    OPTIONS = {
-      wrap: [{"name":"Black Foam","price":10}],
-      accent: [{"name":"Black Foam","price":5}],
-      case: [{"name":"Black Plastic","price":15}],
-      storage: [{"name":"None","price":0},{"name":"16gb","price":8}],
-      lens: [{"name":"Basic","price":0},{"name":"Macro","price":20},{"name":"Fisheye","price":25},{"name":"Zoom","price":40}],
-      charger: [{"name":"None","price":0},{"name":"USBC","price":5}],
-      battery: [{"name":"2000mah","price":20},{"name":"380mah","price":8}]
-    };
-    renderOptions();
-  }
-}
-
-function createOptionCheckbox(idPrefix, item, name){
-  const id = idPrefix + '-' + name.replace(/[^a-z0-9]+/ig,'-') + '-' + Math.random().toString(36).slice(2,7);
-  const label = elt('label','option-label');
-  label.style.background = '#000'; // black background for checkboxes as requested
-  label.style.color = '#fff';
-  const checkbox = document.createElement('input');
-  checkbox.type = 'checkbox';
-  checkbox.dataset.price = item.price || 0;
-  checkbox.dataset.name = item.name;
-  checkbox.id = id;
-  checkbox.className = 'opt-checkbox';
-  const spanName = elt('span','opt-name');
-  spanName.textContent = item.name;
-  const spanPrice = elt('span','opt-price');
-  spanPrice.textContent = money(item.price || 0);
-  label.appendChild(checkbox);
-  label.appendChild(spanName);
-  label.appendChild(spanPrice);
-  return label;
-}
-
-function renderOptions(){
-  // containers
-  const wrapC = document.getElementById('wrap-container');
-  const accentC = document.getElementById('accent-container');
-  const caseC = document.getElementById('case-container');
-  const lensC = document.getElementById('lens-container');
-  const chargerC = document.getElementById('charger-container');
-  const batteryC = document.getElementById('battery-container');
-  const storageS = document.getElementById('storage-select');
-
-  wrapC.innerHTML = ''; accentC.innerHTML=''; caseC.innerHTML=''; lensC.innerHTML=''; chargerC.innerHTML=''; batteryC.innerHTML=''; storageS.innerHTML='';
-
-  (OPTIONS.wrap||[]).forEach(item => wrapC.appendChild(createOptionCheckbox('wrap', item, 'wrap')));
-  (OPTIONS.accent||[]).forEach(item => accentC.appendChild(createOptionCheckbox('accent', item, 'accent')));
-  (OPTIONS.case||[]).forEach(item => caseC.appendChild(createOptionCheckbox('case', item, 'case')));
-  (OPTIONS.lens||[]).forEach(item => lensC.appendChild(createOptionCheckbox('lens', item, 'lens')));
-  (OPTIONS.charger||[]).forEach(item => chargerC.appendChild(createOptionCheckbox('charger', item, 'charger')));
-  (OPTIONS.battery||[]).forEach(item => batteryC.appendChild(createOptionCheckbox('battery', item, 'battery')));
-
-  // storage select (single)
-  (OPTIONS.storage||[]).forEach(item => {
-    const o = document.createElement('option');
-    o.value = item.name;
-    o.textContent = `${item.name} — ${money(item.price||0)}`;
-    o.dataset.price = item.price || 0;
-    storageS.appendChild(o);
-  });
-
-  // attach listeners
-  document.querySelectorAll('.opt-checkbox').forEach(cb => cb.addEventListener('change', updatePrice));
-  storageS.addEventListener('change', updatePrice);
-
-  updatePrice();
-}
-
-/* ---------------------------
-  Price calculation & email preview
-----------------------------*/
-function updatePrice(){
-  const selectedCheckboxes = Array.from(document.querySelectorAll('.opt-checkbox:checked'));
-  let subtotal = 0;
-  const lines = [];
-
-  selectedCheckboxes.forEach(cb=>{
-    subtotal += Number(cb.dataset.price || 0);
-    lines.push(`${cb.dataset.name} — ${money(cb.dataset.price||0)}`);
-  });
-
-  // storage
-  const storage = document.getElementById('storage-select');
-  if(storage.value){
-    subtotal += Number(storage.selectedOptions[0].dataset.price || 0);
-    lines.push(`${storage.value} — ${money(storage.selectedOptions[0].dataset.price||0)}`);
-  }
-
-  // add parts + labor
-  subtotal += PARTS_PRICE + LABOR_PRICE;
-  const total = subtotal;
-
-  document.getElementById('price-summary').textContent = `Total: ${money(total)} (includes ${money(PARTS_PRICE)} parts + ${money(LABOR_PRICE)} labor)`;
-
-  // build email preview
-  const name = document.getElementById('user-name').value || '[name here]';
-  const email = document.getElementById('user-email').value || '[email here]';
-  const phone = document.getElementById('user-phone').value || '[phone here]';
-
-  const bodyLines = [
-    `Hello Pennbrenn team,`,
-    ``,
-    `I'm requesting an estimate for a Penncamm device.`,
-    `Name: ${name}`,
-    `Email: ${email}`,
-    `Phone: ${phone}`,
-    ``,
-    `Selected options:`,
-    ...lines.map(l=>` - ${l}`),
-    ``,
-    `Parts: ${money(PARTS_PRICE)}`,
-    `Labor: ${money(LABOR_PRICE)}`,
-    `Lead time: up to 1 month`,
-    ``,
-    `Estimated total: ${money(total)}`,
-    ``,
-    `Questions / notes:`,
-    ``,
-    `Regards,`,
-    `${name}`
-  ];
-
-  const preview = bodyLines.join('\\n');
-  document.getElementById('email-preview').value = preview;
-}
-
-document.getElementById('estimate-form').addEventListener('input', updatePrice);
-
-/* ---------------------------
-  Generate email actions
-----------------------------*/
-document.getElementById('generate-email').addEventListener('click', function(e){
-  e.preventDefault();
-  const subject = encodeURIComponent('Penncamm Estimate Request');
-  const body = encodeURIComponent(document.getElementById('email-preview').value + '\\n\\n' + LEAD_TIME_TEXT);
-  const mailto = `mailto:${EMAIL_TO}?subject=${subject}&body=${body}`;
-  const link = document.getElementById('mailto-link');
-  link.href = mailto;
-  // open in new tab
-  link.click();
+let options = {};
+fetch('Options.json').then(res => res.json()).then(data => {
+  options = data;
+  populateForm();
 });
 
-document.getElementById('copy-preview').addEventListener('click', function(e){
-  e.preventDefault();
-  const txt = document.getElementById('email-preview').value;
-  navigator.clipboard?.writeText(txt).then(()=> {
-    this.textContent = 'Copied!';
-    setTimeout(()=> this.textContent = 'Copy Preview', 1500);
-  }, ()=> {
-    alert('Your browser prevented copying. Please select and copy manually.');
-  });
-});
-
-
-/* ---------------------------
-  Scroll spy & header behavior
-----------------------------*/
-const navLinks = document.querySelectorAll('.nav-link');
-const sections = document.querySelectorAll('.section');
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      // update nav active
-      navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id));
+function populateForm(){
+  const form = document.getElementById('estimateForm');
+  for(const category in options){
+    if(category==="PartsPrice" || category==="Labor" || category==="LeadTime") continue;
+    const div = document.createElement('div');
+    div.innerHTML = `<label>${category}</label><select multiple id="${category}"></select>`;
+    form.appendChild(div);
+    const select = div.querySelector('select');
+    for(const item in options[category]){
+      const price = options[category][item];
+      const opt = document.createElement('option');
+      opt.value = item;
+      opt.text = `${item} ($${price})`;
+      select.appendChild(opt);
     }
-  });
-}, { root: null, rootMargin: '-40% 0% -40% 0%', threshold: 0 });
+    select.addEventListener('change', updateTotal);
+  }
+  updateTotal();
+}
 
-sections.forEach(s => observer.observe(s));
-
-// Make sure anchors don't get hidden behind fixed header
-document.querySelectorAll('.section').forEach(s => {
-  s.style.scrollMarginTop = (document.getElementById('site-header').offsetHeight + 12) + 'px';
-});
-
-/* ---------------------------
-  Minimal performance: reduce animated paint areas
-----------------------------*/
-document.addEventListener('DOMContentLoaded', () => {
-  // small safety: set scroll-margin again after fonts load
-  setTimeout(()=> {
-    document.querySelectorAll('.section').forEach(s => {
-      s.style.scrollMarginTop = (document.getElementById('site-header').offsetHeight + 12) + 'px';
+function updateTotal(){
+  let total = options.PartsPrice + options.Labor;
+  const emailText = [];
+  for(const category in options){
+    if(category==="PartsPrice" || category==="Labor" || category==="LeadTime") continue;
+    const select = document.getElementById(category);
+    const selected = Array.from(select.selectedOptions).map(o=>o.value);
+    selected.forEach(item=>{
+      total += options[category][item];
+      emailText.push(`${category}: ${item} ($${options[category][item]})`);
     });
-  }, 300);
-});
-
-/* ---------------------------
-  Init
-----------------------------*/
-loadOptions();
-
-</script>
-
-</body>
-</html>
-
-
+  }
