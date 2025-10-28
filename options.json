@@ -1,0 +1,65 @@
+{
+  "wrap": [
+    {"name":"Real Leather — Tan","price":45},
+    {"name":"Real Leather — Black","price":45},
+    {"name":"Real Leather — Brown","price":45},
+    {"name":"Foam — Black","price":12},
+    {"name":"Foam — White","price":12},
+    {"name":"Foam — Red","price":12},
+    {"name":"Foam — Blue","price":12},
+    {"name":"Foam — Green","price":12},
+    {"name":"Foam — Pink","price":12}
+  ],
+  "material": [
+    {"name":"Metal — Steel","price":60},
+    {"name":"Metal — Titanium","price":150},
+    {"name":"Metal — Iron (rusts)","price":40},
+    {"name":"Metal — Brass","price":70},
+    {"name":"Metal — Copper","price":70},
+    {"name":"Metal — Gold","price":250},
+    {"name":"Plastic — Multicolor","price":15},
+    {"name":"Plastic — Clear","price":10},
+    {"name":"Plastic — Black","price":10}
+  ],
+  "accent": [
+    {"name":"Reflective","price":18},
+    {"name":"Real Leather Accent — Black","price":35},
+    {"name":"Real Leather Accent — Tan","price":35},
+    {"name":"Carbon Fiber Accent","price":40},
+    {"name":"Fibre — Fiberglass","price":30}
+  ],
+  "case": [
+    {"name":"Case — Steel","price":90},
+    {"name":"Case — Titanium","price":220},
+    {"name":"Case — Plastic — Black","price":25},
+    {"name":"Case — Leather","price":60},
+    {"name":"Case — Clear","price":35}
+  ],
+  "colorfade": [
+    {"name":"Clear","price":0},
+    {"name":"Subtle fade","price":12},
+    {"name":"Heavy fade","price":25}
+  ],
+  "storage": [
+    {"name":"None","price":0},
+    {"name":"16GB (~1h|200 photos)","price":8},
+    {"name":"32GB (~3h|600 photos)","price":12},
+    {"name":"64GB (~6h|1200 photos)","price":20},
+    {"name":"128GB (~12h|2400 photos)","price":35},
+    {"name":"256GB (~32h|6000 photos)","price":60}
+  ],
+  "lens": [
+    {"name":"Basic","price":0},
+    {"name":"Macro","price":25},
+    {"name":"Fisheye","price":30},
+    {"name":"Zoom (>10x)","price":80}
+  ],
+  "charger": [
+    {"name":"None (Use own)","price":0},
+    {"name":"USB-C","price":12}
+  ],
+  "battery": [
+    {"name":"2000mAh (>6h)","price":25},
+    {"name":"380mAh (>3h)","price":12}
+  ]
+}
