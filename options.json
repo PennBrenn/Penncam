@@ -1,65 +1,88 @@
 {
+  "_multi": ["Lens"],
   "Wrap": [
-    {"name":"Real Leather | Tan","price":50},
-    {"name":"Real Leather | Black","price":50},
-    {"name":"Real Leather | Brown","price":50},
-    {"name":"Real Leather | Blue","price":50},
-    {"name":"Foam | Black","price":15},
-    {"name":"Foam | White","price":15},
-    {"name":"Foam | Red","price":15},
-    {"name":"Metal | Steel","price":80},
-    {"name":"Metal | Titanium","price":120},
-    {"name":"Metal | Brass","price":70},
-    {"name":"Plastic | Black","price":10},
-    {"name":"Plastic | White","price":10},
-    {"name":"Silicone | Black","price":12},
-    {"name":"Fibre | Carbon","price":60}
+    {"name":"Real Leather - Tan", "price":35},
+    {"name":"Real Leather - Black", "price":35},
+    {"name":"Real Leather - Brown", "price":35},
+    {"name":"Real Leather - Blue", "price":35},
+    {"name":"Foam - Black", "price":12},
+    {"name":"Foam - White", "price":12},
+    {"name":"Foam - Red", "price":12},
+    {"name":"Foam - Orange", "price":12},
+    {"name":"Foam - Yellow", "price":12},
+    {"name":"Foam - Green", "price":12},
+    {"name":"Foam - Blue", "price":12},
+    {"name":"Foam - Purple", "price":12},
+    {"name":"Foam - Pink", "price":12},
+    {"name":"Foam - Brown", "price":12}
   ],
-  "Accent": [
-    {"name":"Accent | Real Leather - Tan","price":20},
-    {"name":"Accent | Foam - Black","price":10},
-    {"name":"Accent | Metal - Steel","price":25},
-    {"name":"Accent | Plastic - Multicolor","price":8}
+  "Metal": [
+    {"name":"Steel", "price":45},
+    {"name":"Titanium", "price":120},
+    {"name":"Iron (rusts)", "price":30},
+    {"name":"Brass", "price":55},
+    {"name":"Copper", "price":50},
+    {"name":"Gold", "price":250}
+  ],
+  "Plastic": [
+    {"name":"Multicolor", "price":10},
+    {"name":"Clear", "price":8},
+    {"name":"Black", "price":10},
+    {"name":"White", "price":10},
+    {"name":"Red", "price":10},
+    {"name":"Orange", "price":10},
+    {"name":"Yellow", "price":10},
+    {"name":"Green", "price":10},
+    {"name":"Blue", "price":10},
+    {"name":"Purple", "price":10},
+    {"name":"Pink", "price":10},
+    {"name":"Brown", "price":10}
+  ],
+  "Silicone": [
+    {"name":"Black", "price":8},
+    {"name":"White", "price":8},
+    {"name":"Red", "price":8},
+    {"name":"Orange", "price":8},
+    {"name":"Yellow", "price":8},
+    {"name":"Green", "price":8},
+    {"name":"Blue", "price":8},
+    {"name":"Purple", "price":8},
+    {"name":"Pink", "price":8},
+    {"name":"Brown", "price":8}
   ],
   "Case": [
-    {"name":"Case | Steel","price":90},
-    {"name":"Case | Titanium","price":160},
-    {"name":"Case | Brass","price":85},
-    {"name":"Case | Plastic","price":20},
-    {"name":"Case | Multicolor","price":35}
+    {"name":"Metal - Steel", "price":40},
+    {"name":"Metal - Titanium", "price":120},
+    {"name":"Plastic - Clear", "price":20},
+    {"name":"Plastic - Black", "price":18},
+    {"name":"Multicolor", "price":22}
   ],
   "Color fade": [
-    {"name":"Clear","price":0},
-    {"name":"Accent fade","price":12}
+    {"name":"None", "price":0},
+    {"name":"Subtle fade", "price":12},
+    {"name":"Heavy fade", "price":20},
+    {"name":"Custom gradient", "price":45}
   ],
   "Storage": [
-    {"name":"None","price":0},
-    {"name":"16gb (~1h|200photos)","price":5},
-    {"name":"32gb (~3h)","price":10},
-    {"name":"64gb (~6h)","price":18},
-    {"name":"128gb (~12h)","price":30},
-    {"name":"256gb (~32h)","price":50}
+    {"name":"None", "price":0},
+    {"name":"16GB (~1h|200photos)", "price":8},
+    {"name":"32GB (~3h|400photos)", "price":12},
+    {"name":"64GB (~6h|800photos)", "price":20},
+    {"name":"128GB (~12h|1600photos)", "price":35},
+    {"name":"256GB (~32h|3200photos)", "price":60}
   ],
   "Lens": [
-    {"name":"Basic","price":0},
-    {"name":"Macro","price":25},
-    {"name":"Fisheye","price":40},
-    {"name":"Zoom (>10x)","price":80}
+    {"name":"Basic", "price":0},
+    {"name":"Macro", "price":35},
+    {"name":"Fisheye", "price":30},
+    {"name":"Zoom (>10x)", "price":85}
   ],
   "Charger": [
-    {"name":"None (Use own)","price":0},
-    {"name":"USB-C","price":8}
+    {"name":"None (Use own)", "price":0},
+    {"name":"USB-C", "price":10}
   ],
   "Battery": [
-    {"name":"2000mah (>6h)","price":20},
-    {"name":"380mah (>3h)","price":10}
-  ],
-  "Extras": [
-    {"name":"Reflective","price":12},
-    {"name":"Multicolor finish","price":18},
-    {"name":"Custom engraving","price":30}
-  ],
-  "meta": {
-    "multi": ["Lens"]
-  }
+    {"name":"2000mah (>6h)", "price":22},
+    {"name":"380mah (>3h)", "price":12}
+  ]
 }
