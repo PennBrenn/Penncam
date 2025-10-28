@@ -1,150 +1,404 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VV5DY5JBSZ"></script>
-<script> 
-window.dataLayer = window.dataLayer || []; 
-function gtag(){dataLayer.push(arguments);} 
-gtag('js', new Date()); 
-gtag('config', 'G-VV5DY5JBSZ'); 
-</script>
-<title>Penncamm</title>
-<link rel="icon" type="image/png" href="favicon96.png" />
-<link rel="stylesheet" href="index.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VV5DY5JBSZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VV5DY5JBSZ');
+  </script>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Penncamm</title>
+  <link rel="icon" type="image/png" href="favicon96.png" id="i5zs8q" />
+  <meta name="description" content="Penncamm - Dont just capture content, capture memories" />
+  <link rel="stylesheet" href="index.css" />
 </head>
 <body>
+  <header id="site-header" class="header">
+    <div class="header-left">Penncamm</div>
+    <nav class="header-nav" id="nav">
+      <a href="#home" class="nav-link" data-target="home">Home</a>
+      <a href="#samples" class="nav-link" data-target="samples">Samples</a>
+      <a href="#features" class="nav-link" data-target="features">Features</a>
+      <a href="#about" class="nav-link" data-target="about">About</a>
+      <a href="#buy" class="nav-link" data-target="buy">Buy / Quote</a>
+      <a href="#legal" class="nav-link" data-target="legal">Legal</a>
+    </nav>
 
-<header>
-  <h1>Penncamm</h1>
-  <nav>
-    <a href="#home" class="active">Home</a>
-    <a href="#samples">Samples</a>
-    <a href="#features">Features</a>
-    <a href="#about">About</a>
-    <a href="#buy">Buy</a>
-    <a href="#legal">Legal</a>
-    <a href="https://www.pennbrenn.com" target="_blank"><img src="favicon96.png" width="30" style="vertical-align: middle;"></a>
-  </nav>
-</header>
+    <div class="header-right">
+      <img src="favicon96.png" alt="Penncamm logo" class="logo" />
+      <a class="webring-btn" href="https://www.pennbrenn.com" target="_blank" rel="noopener">Pennbrenn webring</a>
+    </div>
+  </header>
 
-<section id="home">
-  <h2>Penncamm</h2>
-  <img src="penncammcam.png" alt="Camera">
-  <p>Don't just capture content, capture memories.</p>
-</section>
+  <main>
+    <!-- FULLSCREEN HOME -->
+    <section id="home" class="panel hero">
+      <div class="glass">
+        <h1 class="title">Penncamm</h1>
+        <img src="penncammcam.png" alt="Penncamm camera" class="hero-cam" />
+        <p class="lead">Don't just capture content, capture memories.</p>
+      </div>
+    </section>
 
-<section id="samples">
-  <h2>Sample Photos</h2>
-  <div class="samples">
-    <img src="sam.png" alt="Standard">
-    <img src="sam.png" alt="Fisheye">
-    <img src="sam.png" alt="Macro">
-    <img src="sam.png" alt="Zoom">
-  </div>
-</section>
+    <!-- SAMPLES -->
+    <section id="samples" class="panel samples">
+      <div class="glass">
+        <h2 class="section-title">Sample Photos</h2>
+        <div class="sample-grid">
+          <figure>
+            <img src="sample_standard.png" alt="Standard sample" />
+            <figcaption>Standard</figcaption>
+          </figure>
+          <figure>
+            <img src="sample_fisheye.png" alt="Fisheye sample" />
+            <figcaption>Fisheye</figcaption>
+          </figure>
+          <figure>
+            <img src="sample_macro.png" alt="Macro sample" />
+            <figcaption>Macro</figcaption>
+          </figure>
+          <figure>
+            <img src="sample_zoom.png" alt="Zoom sample" />
+            <figcaption>Zoom</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
 
-<section id="features">
-  <h2>Features</h2>
-  <div class="features">
-    <div class="feature"><h3>Build Durability</h3><p>A stainless steel or reinforced plastic frame ensures durability in every moment.</p></div>
-    <div class="feature"><h3>Display</h3><p>A high-definition display lets you see your memories as they were meant to be seen.</p></div>
-    <div class="feature"><h3>Ergonomics</h3><p>A textured, non-slip leather or foam grip ensures secure, comfortable handling.</p></div>
-    <div class="feature"><h3>Repairability</h3><p>With a lifetime warranty, you can be reassured that you'll have every moment.</p></div>
-    <div class="feature"><h3>Sensor</h3><p>An 8MP sensor with 1080p video allows every moment to be captured with clear, vivid detail.</p></div>
-    <div class="feature"><h3>Battery</h3><p>Up to a 2000mAh battery gives you extended time to get every detail without interruption.</p></div>
-    <div class="feature"><h3>Interface</h3><p>With minimal controls, capturing memories becomes second nature.</p></div>
-    <div class="feature"><h3>Flash</h3><p>A strong flash, combined with the camera's auto exposure, lets every moment be lit.</p></div>
-  </div>
-</section>
+    <!-- FEATURES -->
+    <section id="features" class="panel features">
+      <div class="glass">
+        <h2 class="section-title">Features</h2>
+        <div class="feature-list">
+          <h3>Build Durability</h3>
+          <p>A stainless steel or reinforced plastic frame ensures durability in every moment.</p>
 
-<section id="about">
-  <h2>About Me</h2>
-  <p>Basic about me (editable later)</p>
-  <a href="https://www.pennbrenn.com" target="_blank"><button class="legal-btn">Learn More</button></a>
-</section>
+          <h3>Display</h3>
+          <p>A high-definition display lets you see your memories as they were meant to be seen.</p>
 
-<section id="buy">
-  <h2>Get a Quote</h2>
-  <form class="buy-form" id="buyForm">
-    <!-- Options will be populated by JS -->
-  </form>
-  <h3>Email Preview:</h3>
-  <div id="emailPreview"></div>
-</section>
+          <h3>Ergonomics</h3>
+          <p>A textured, non-slip leather or foam grip ensures secure, comfortable handling.</p>
 
-<section id="legal">
-  <h2>Legal</h2>
-  <p>All legal information can be accessed here.</p>
-  <a href="./legal.html"><button class="legal-btn">View Legal</button></a>
-</section>
+          <h3>Repairability</h3>
+          <p>With a lifetime warranty, you can be reassured that you'll have every moment.</p>
 
-<script>
-const optionsData = {};
-fetch('options.json').then(res => res.json()).then(data => {
-  Object.assign(optionsData, data);
-  generateForm();
-});
+          <h3>Technology</h3>
+          <p><strong>Sensor</strong> — An 8MP sensor with 1080p video allows every moment to be captured with clear, vivid detail.</p>
+          <p><strong>Battery</strong> — Up to a 2000mAh battery gives you extended time to get every detail without interruption.</p>
+          <p><strong>Interface</strong> — With minimal controls, capturing memories becomes second nature.</p>
+          <p><strong>Flash</strong> — A strong flash, combined with the camera's auto exposure, lets every moment be lit.</p>
+        </div>
+      </div>
+    </section>
 
-const buyForm = document.getElementById('buyForm');
-const emailPreview = document.getElementById('emailPreview');
-const partsPrice = 15;
-const laborPrice = 40;
+    <!-- ABOUT -->
+    <section id="about" class="panel about">
+      <div class="glass">
+        <h2 class="section-title">About</h2>
+        <p class="body-text">Basic about me (I'll edit later)</p>
+        <a class="cta" href="https://www.pennbrenn.com" target="_blank" rel="noopener">Learn more</a>
+      </div>
+    </section>
 
-function generateForm() {
-  for (let category in optionsData) {
-    const div = document.createElement('div');
-    div.innerHTML = `<label>${category}
-      <select multiple data-category="${category}"></select>
-    </label>`;
-    const select = div.querySelector('select');
-    for (let item in optionsData[category]) {
-      const option = document.createElement('option');
-      option.value = item;
-      option.textContent = `${item} ($${optionsData[category][item]})`;
-      select.appendChild(option);
+    <!-- BUY / ESTIMATE -->
+    <section id="buy" class="panel buy">
+      <div class="glass">
+        <h2 class="section-title">Get an Estimate</h2>
+        <p class="body-text">We quote each build individually — choose your options below. Lead time: up to 1 month.</p>
+
+        <form id="options-form" class="options-form" onsubmit="return false;">
+          <div id="options-container">Loading options…</div>
+
+          <div class="form-row">
+            <label for="contactName">Name</label>
+            <input type="text" id="contactName" placeholder="Your name" />
+          </div>
+
+          <div class="form-row">
+            <label for="contactEmail">Email</label>
+            <input type="email" id="contactEmail" placeholder="you@example.com" />
+          </div>
+
+          <div class="form-row">
+            <label for="contactPhone">Phone</label>
+            <input type="tel" id="contactPhone" placeholder="Optional phone number" />
+          </div>
+
+          <div class="form-row">
+            <label for="userNotes">Questions / Notes</label>
+            <textarea id="userNotes" placeholder="Add additional questions for the quote"></textarea>
+          </div>
+
+          <div class="totals">
+            <div>Parts: <span id="partsFee">$15.00</span></div>
+            <div>Labor: <span id="laborFee">$40.00</span></div>
+            <div>Lead time: <em>Up to 1 month</em></div>
+            <div class="grand">Total: <strong id="grandTotal">$0.00</strong></div>
+          </div>
+
+          <div class="actions">
+            <button id="generateEmail" type="button">Generate Email</button>
+            <button id="copyEmail" type="button">Copy Email Text</button>
+            <a id="mailtoLink" class="mailto-link" href="#">Open in mail client</a>
+          </div>
+
+          <div class="email-preview">
+            <label for="emailPreview">Email preview (editable)</label>
+            <textarea id="emailPreview" rows="10"></textarea>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- LEGAL -->
+    <section id="legal" class="panel legal">
+      <div class="glass">
+        <h2 class="section-title">Legal</h2>
+        <p class="body-text">Please read our legal information and warranty policies.</p>
+        <a class="cta" href="./legal.html" target="_blank" rel="noopener">Open legal page</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">© Penncamm — Handmade digital cameras built to last</div>
+  </footer>
+
+  <!-- Inline JS as requested -->
+  <script>
+    // --- Config
+    const PARTS_FEE = 15.00;
+    const LABOR_FEE = 40.00;
+
+    // utility
+    function money(n){ return '$' + n.toFixed(2); }
+
+    // Build nav highlight based on section in view
+    (function navObserver(){
+      const links = document.querySelectorAll('.nav-link');
+      const sections = Array.from(links).map(l => document.getElementById(l.dataset.target));
+      const options = { root: null, rootMargin: '0px 0px -50% 0px', threshold: 0 };
+      const obs = new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{
+          if(e.isIntersecting){
+            links.forEach(link=> link.classList.remove('active'));
+            const link = document.querySelector('.nav-link[data-target="'+e.target.id+'"]');
+            if(link) link.classList.add('active');
+          }
+        });
+      }, options);
+      sections.forEach(s=> s && obs.observe(s));
+    })();
+
+    // Make header follow user (sticky)
+    (function headerFollow(){
+      const header = document.getElementById('site-header');
+      let lastScroll = window.scrollY;
+      window.addEventListener('scroll', ()=>{
+        const cur = window.scrollY;
+        if(cur > lastScroll && cur > 100){
+          header.classList.add('header-hide');
+        } else {
+          header.classList.remove('header-hide');
+        }
+        lastScroll = cur;
+      }, {passive:true});
+    })();
+
+    // Fetch options.json and render form controls
+    async function loadOptions(){
+      try{
+        const res = await fetch('options.json', {cache: 'no-store'});
+        const data = await res.json();
+        renderOptions(data);
+      } catch(err){
+        document.getElementById('options-container').textContent = 'Failed to load options.json — check the file is present and valid.';
+        console.error(err);
+      }
     }
-    buyForm.appendChild(div);
-  }
-  const btn = document.createElement('button');
-  btn.type = 'button';
-  btn.textContent = 'Generate Email';
-  btn.onclick = generateEmail;
-  buyForm.appendChild(btn);
-}
 
-function generateEmail() {
-  let emailText = `To: cam@pennbrenn.com\nSubject: Penncamm Quote Request\n\nSelected Options:\n`;
-  let total = partsPrice + laborPrice;
-  for (let select of buyForm.querySelectorAll('select')) {
-    const category = select.dataset.category;
-    const values = Array.from(select.selectedOptions).map(o => o.value);
-    if(values.length) {
-      emailText += `\n${category}: ${values.join(', ')}\n`;
-      for (let v of values) total += optionsData[category][v];
+    function renderOptions(data){
+      const container = document.getElementById('options-container');
+      container.innerHTML = '';
+
+      // For each category, render appropriately
+      Object.keys(data).forEach(categoryKey => {
+        const cat = data[categoryKey];
+        const block = document.createElement('fieldset');
+        block.className = 'opt-block';
+        const legend = document.createElement('legend');
+        legend.textContent = cat.label;
+        block.appendChild(legend);
+
+        // choose rendering type:
+        // if cat.multiple -> checkboxes; otherwise radio (single select)
+        if(cat.multiple){
+          cat.items.forEach((item, idx) => {
+            const id = `${categoryKey}_${idx}`;
+            const wrapper = document.createElement('label');
+            wrapper.className = 'opt-checkbox';
+            wrapper.title = item.name + ' — ' + money(item.price);
+            const input = document.createElement('input');
+            input.type = 'checkbox';
+            input.dataset.price = String(item.price);
+            input.dataset.cat = categoryKey;
+            input.value = item.name;
+            input.id = id;
+            const spanName = document.createElement('span');
+            spanName.className = 'opt-name';
+            spanName.textContent = item.name;
+            const spanPrice = document.createElement('span');
+            spanPrice.className = 'opt-price';
+            spanPrice.textContent = money(item.price);
+            wrapper.appendChild(input);
+            wrapper.appendChild(spanName);
+            wrapper.appendChild(spanPrice);
+            block.appendChild(wrapper);
+          });
+        } else {
+          // single-choice radio group
+          const noneOption = cat.allow_none ? {name: 'None', price: 0} : null;
+          const itemsToRender = noneOption ? [noneOption, ...cat.items] : cat.items;
+          itemsToRender.forEach((item, idx) => {
+            const id = `${categoryKey}_r_${idx}`;
+            const wrapper = document.createElement('label');
+            wrapper.className = 'opt-radio';
+            const input = document.createElement('input');
+            input.type = 'radio';
+            input.name = categoryKey;
+            input.dataset.price = String(item.price || 0);
+            input.dataset.cat = categoryKey;
+            input.value = item.name;
+            input.id = id;
+            if(idx === 0 && cat.default_first) input.checked = true;
+            const spanName = document.createElement('span');
+            spanName.className = 'opt-name';
+            spanName.textContent = item.name;
+            const spanPrice = document.createElement('span');
+            spanPrice.className = 'opt-price';
+            spanPrice.textContent = money(item.price || 0);
+            wrapper.appendChild(input);
+            wrapper.appendChild(spanName);
+            wrapper.appendChild(spanPrice);
+            block.appendChild(wrapper);
+          });
+        }
+
+        container.appendChild(block);
+      });
+
+      // add listeners to update totals
+      container.querySelectorAll('input').forEach(i=>{
+        i.addEventListener('change', updateTotals);
+      });
+
+      updateTotals();
     }
-  }
-  emailText += `\nParts: $${partsPrice}\nLabor: $${laborPrice}\nLead time: up to 1 month\nTotal: $${total}`;
-  emailPreview.textContent = emailText;
-}
 
-/* Header highlight on scroll */
-const sections = document.querySelectorAll('section');
-const navLinks = document.querySelectorAll('header nav a');
-window.addEventListener('scroll', ()=>{
-  let current = '';
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop - 70;
-    if(pageYOffset >= sectionTop) current = section.getAttribute('id');
-  });
-  navLinks.forEach(a => {
-    a.classList.remove('active');
-    if(a.getAttribute('href') === '#'+current) a.classList.add('active');
-  });
-});
-</script>
+    function updateTotals(){
+      const inputs = Array.from(document.querySelectorAll('#options-container input'));
+      let subtotal = 0;
+      const selectedItems = [];
+      inputs.forEach(i=>{
+        if(i.type === 'checkbox' && i.checked){
+          const p = parseFloat(i.dataset.price) || 0;
+          subtotal += p;
+          selectedItems.push({cat: i.dataset.cat, name: i.value, price: p});
+        } else if(i.type === 'radio' && i.checked){
+          const p = parseFloat(i.dataset.price) || 0;
+          subtotal += p;
+          selectedItems.push({cat: i.dataset.cat, name: i.value, price: p});
+        }
+      });
 
+      const parts = PARTS_FEE;
+      const labor = LABOR_FEE;
+      const total = subtotal + parts + labor;
+      document.getElementById('grandTotal').textContent = money(total);
+      document.getElementById('partsFee').textContent = money(parts);
+      document.getElementById('laborFee').textContent = money(labor);
+
+      // store for email generation
+      window.__estimate = {selectedItems, subtotal, parts, labor, total};
+    }
+
+    function generateEmailText(){
+      const contactName = document.getElementById('contactName').value.trim();
+      const contactEmail = document.getElementById('contactEmail').value.trim();
+      const contactPhone = document.getElementById('contactPhone').value.trim();
+      const notes = document.getElementById('userNotes').value.trim();
+      const est = window.__estimate || {selectedItems: [], subtotal:0, parts:0, labor:0, total:0};
+
+      let body = '';
+      body += `Hello Pennbrenn / Penncamm team,\n\nI'd like a quote for a custom Penncamm build with the following options:\n\n`;
+
+      if(est.selectedItems.length === 0){
+        body += '(No options selected)\n';
+      } else {
+        est.selectedItems.forEach(it => {
+          body += `- ${it.cat}: ${it.name} (${money(it.price)})\n`;
+        });
+      }
+
+      body += `\nSubtotal: ${money(est.subtotal)}\n`;
+      body += `Parts fee: ${money(est.parts)}\n`;
+      body += `Labor: ${money(est.labor)}\n`;
+      body += `Total estimate: ${money(est.total)}\n\n`;
+      body += `Lead time: Up to 1 month\n\n`;
+      body += `Contact details:\nName: ${contactName || '[not provided]'}\nEmail: ${contactEmail || '[not provided]'}\nPhone: ${contactPhone || '[not provided]'}\n\n`;
+      body += `Questions / Notes:\n${notes || '[none]'}\n\n`;
+      body += `Please reply with a formal quote and next steps. Thank you.\n\nRegards,\n${contactName || ''}`;
+
+      // put into preview
+      const preview = document.getElementById('emailPreview');
+      preview.value = body;
+
+      // create mailto link
+      const subject = encodeURIComponent('Penncamm Quote Request');
+      const mailtoBody = encodeURIComponent(preview.value);
+      const mailto = `mailto:cam@pennbrenn.com?subject=${subject}&body=${mailtoBody}`;
+      const mailtoLink = document.getElementById('mailtoLink');
+      mailtoLink.href = mailto;
+      mailtoLink.setAttribute('target','_blank');
+    }
+
+    function copyEmailToClipboard(){
+      const preview = document.getElementById('emailPreview');
+      preview.select();
+      preview.setSelectionRange(0, 99999);
+      try {
+        document.execCommand('copy');
+        // Visual confirmation (small)
+        alert('Email text copied to clipboard — paste into your mail client to send or use "Open in mail client".');
+      } catch(err){
+        alert('Copy failed — please manually select and copy the email preview.');
+      }
+    }
+
+    // buttons
+    document.addEventListener('click', (e)=>{
+      if(e.target && e.target.id === 'generateEmail'){ generateEmailText(); }
+      if(e.target && e.target.id === 'copyEmail'){ copyEmailToClipboard(); }
+    });
+
+    // init
+    loadOptions();
+
+    // Smooth scroll for nav
+    document.querySelectorAll('.nav-link').forEach(a=>{
+      a.addEventListener('click', (ev)=>{
+        ev.preventDefault();
+        const id = a.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
+      });
+    });
+
+  </script>
 </body>
 </html>
