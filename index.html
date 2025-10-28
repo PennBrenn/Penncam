@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
@@ -10,153 +10,413 @@
     gtag('config', 'G-VV5DY5JBSZ');
   </script>
 
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Penncamm</title>
   <link rel="icon" type="image/png" href="favicon96.png" id="i5zs8q" />
-  <meta name="description" content="Penncamm - Don't just capture content, capture memories">
-  <link rel="stylesheet" href="index.css">
+  <meta name="description" content="Penncamm - Dont just capture content, capture memories" />
+
+  <link rel="stylesheet" href="index.css" />
 </head>
 <body>
-  <header id="header">
-    <div class="left">Penncamm</div>
-    <nav>
-      <a href="#home" class="active">Home</a>
-      <a href="#samples">Samples</a>
-      <a href="#features">Features</a>
-      <a href="#about">About</a>
-      <a href="#buy">Buy</a>
-      <a href="#legal">Legal</a>
+  <!-- Header -->
+  <header id="site-header" class="header">
+    <div class="header-left">Penncamm</div>
+    <nav class="nav" id="site-nav">
+      <a class="nav-link" href="#home" data-target="home">Home</a>
+      <a class="nav-link" href="#samples" data-target="samples">Samples</a>
+      <a class="nav-link" href="#features" data-target="features">Features</a>
+      <a class="nav-link" href="#about" data-target="about">About</a>
+      <a class="nav-link" href="#buy" data-target="buy">Buy / Estimate</a>
+      <a class="nav-link" href="#legal" data-target="legal">Legal</a>
     </nav>
-    <div class="right">
-      <img src="favicon96.png" alt="logo" class="logo">
-      <button class="webring" onclick="window.open('https://www.pennbrenn.com')">PennBrenn</button>
+
+    <div class="header-right">
+      <img src="favicon96.png" alt="Penncamm logo" class="logo" />
+      <a class="webring-btn" href="https://www.pennbrenn.com" target="_blank" rel="noopener">PennBrenn Webring</a>
     </div>
   </header>
 
-  <!-- HOME -->
-  <section id="home" class="section">
-    <div class="glass">
-      <h1>Penncamm</h1>
-      <img src="penncammcam.png" alt="Penncamm Camera" class="camera">
-      <p>Don't just capture content, capture memories.</p>
-    </div>
-  </section>
-
-  <!-- SAMPLES -->
-  <section id="samples" class="section">
-    <div class="glass">
-      <h2>Sample Photos</h2>
-      <div class="samples">
-        <img src="sam.png" alt="Standard Lens">
-        <img src="sam.png" alt="Fisheye Lens">
-        <img src="sam.png" alt="Macro Lens">
-        <img src="sam.png" alt="Zoom Lens">
+  <!-- Page -->
+  <main>
+    <!-- HOME -->
+    <section id="home" class="section glass hero" data-title="Home">
+      <h1 class="title">Penncamm</h1>
+      <div class="hero-image-wrap">
+        <img src="penncammcam.png" alt="Penncamm Camera" class="hero-image" />
       </div>
-    </div>
-  </section>
+      <p class="lead">Don't just capture content, capture memories.</p>
+    </section>
 
-  <!-- FEATURES -->
-  <section id="features" class="section">
-    <div class="glass">
-      <h2>Features</h2>
-      <div class="features-grid">
-        <div><strong>Build Durability:</strong> Stainless steel or reinforced plastic frame ensures durability in every moment.</div>
-        <div><strong>Display:</strong> A high-definition display lets you see your memories as they were meant to be seen.</div>
-        <div><strong>Ergonomics:</strong> Textured, non-slip leather or foam grip ensures secure, comfortable handling.</div>
-        <div><strong>Repairability:</strong> Lifetime warranty ensures you'll have every moment.</div>
-        <div><strong>Sensor:</strong> 8MP sensor with 1080p video captures clear, vivid detail.</div>
-        <div><strong>Battery:</strong> 2000mAh battery for extended sessions.</div>
-        <div><strong>Interface:</strong> Minimal controls make capturing second nature.</div>
-        <div><strong>Flash:</strong> Strong flash and auto exposure light every moment.</div>
+    <!-- SAMPLES -->
+    <section id="samples" class="section glass" data-title="Samples">
+      <h2 class="section-title">Sample Photos</h2>
+      <div class="samples-grid">
+        <figure>
+          <img src="sample_standard.png" alt="Standard lens sample" />
+          <figcaption>Standard</figcaption>
+        </figure>
+        <figure>
+          <img src="sample_fisheye.png" alt="Fisheye lens sample" />
+          <figcaption>Fisheye</figcaption>
+        </figure>
+        <figure>
+          <img src="sample_macro.png" alt="Macro lens sample" />
+          <figcaption>Macro</figcaption>
+        </figure>
+        <figure>
+          <img src="sample_zoom.png" alt="Zoom lens sample" />
+          <figcaption>Zoom</figcaption>
+        </figure>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ABOUT -->
-  <section id="about" class="section">
-    <div class="glass">
-      <h2>About Me</h2>
-      <p>Basic about me (will be edited later).</p>
-      <button onclick="window.open('https://www.pennbrenn.com')">Learn More</button>
-    </div>
-  </section>
-
-  <!-- BUY -->
-  <section id="buy" class="section">
-    <div class="glass">
-      <h2>Buy / Estimate Generator</h2>
-      <p>Each Penncamm is handmade and individually quoted. Lead time: up to 1 month.</p>
-
-      <div id="configurator"></div>
-
-      <div class="output">
-        <h3>Estimate Summary</h3>
-        <pre id="emailPreview"></pre>
-        <button onclick="copyEmail()">Copy Email</button>
+    <!-- FEATURES -->
+    <section id="features" class="section glass" data-title="Features">
+      <h2 class="section-title">Features</h2>
+      <div class="feature-columns">
+        <div>
+          <h3>Build & Durability</h3>
+          <p>A stainless steel or reinforced plastic frame ensures durability in every moment.</p>
+          <h3>Display</h3>
+          <p>A high-definition display lets you see your memories as they were meant to be seen.</p>
+          <h3>Ergonomics</h3>
+          <p>A textured, non-slip leather or foam grip ensures secure, comfortable handling.</p>
+          <h3>Repairability</h3>
+          <p>With a lifetime warranty, you can be reassured that you'll have every moment.</p>
+        </div>
+        <div>
+          <h3>Technology</h3>
+          <p><strong>Sensor</strong> — 8MP sensor with 1080p video for clear, vivid detail.</p>
+          <p><strong>Battery</strong> — Up to a 2000mAh battery gives extended time to capture every detail.</p>
+          <p><strong>Interface</strong> — Minimal controls so capturing memories is second nature.</p>
+          <p><strong>Flash</strong> — Strong flash combined with auto exposure to light every moment.</p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- LEGAL -->
-  <section id="legal" class="section">
-    <div class="glass">
-      <h2>Legal</h2>
-      <button onclick="window.location.href='./legal.html'">View Legal</button>
-    </div>
-  </section>
+    <!-- ABOUT -->
+    <section id="about" class="section glass" data-title="About">
+      <h2 class="section-title">About</h2>
+      <p>Basic about me (I'll edit later)</p>
+      <a class="learn-more" href="https://www.pennbrenn.com" target="_blank" rel="noopener">Learn more</a>
+    </section>
 
+    <!-- BUY / ESTIMATE -->
+    <section id="buy" class="section glass" data-title="Buy">
+      <h2 class="section-title">Estimate / Custom Order</h2>
+      <p class="lead small">We do not do direct click-and-buy. Each camera is individually quoted and tailored. Lead time: <strong>up to a month</strong>.</p>
+
+      <div class="estimate-grid">
+        <div class="options-panel">
+          <h3>Select options</h3>
+
+          <div class="option-group">
+            <label>Wrap</label>
+            <div id="wrap-list" class="option-list scrollable"></div>
+          </div>
+
+          <div class="option-group">
+            <label>Accent</label>
+            <div id="accent-list" class="option-list scrollable"></div>
+          </div>
+
+          <div class="option-group">
+            <label>Case</label>
+            <div id="case-list" class="option-list scrollable"></div>
+          </div>
+
+          <div class="option-group">
+            <label>Storage</label>
+            <div id="storage-list" class="option-list scrollable"></div>
+          </div>
+
+          <div class="option-group">
+            <label>Lens (select any)</label>
+            <div id="lens-list" class="option-list scrollable"></div>
+            <div class="small-note">* Select multiple lenses if desired</div>
+          </div>
+
+          <div class="option-group">
+            <label>Charger</label>
+            <div id="charger-list" class="option-list scrollable"></div>
+          </div>
+
+          <div class="option-group">
+            <label>Battery</label>
+            <div id="battery-list" class="option-list scrollable"></div>
+          </div>
+
+          <div class="option-group">
+            <label>Parts & Labor (auto)</label>
+            <div class="parts-labor">Parts: $15 — Labor: $40</div>
+          </div>
+
+        </div>
+
+        <div class="summary-panel">
+          <h3>Estimate Preview</h3>
+
+          <label for="cust-name">Your name</label>
+          <input id="cust-name" type="text" placeholder="Full name" />
+
+          <label for="cust-email">Your email</label>
+          <input id="cust-email" type="email" placeholder="you@example.com" />
+
+          <label for="cust-phone">Phone (optional)</label>
+          <input id="cust-phone" type="tel" placeholder="+1 555 555 5555" />
+
+          <h4>Selected items</h4>
+          <div id="selected-list" class="selected-list"></div>
+
+          <div class="total-row">
+            <div>Total (incl. parts & labor)</div>
+            <div id="total-amount">$0.00</div>
+          </div>
+
+          <label for="notes">Questions / notes</label>
+          <textarea id="notes" placeholder="Add any questions or special instructions..."></textarea>
+
+          <div class="actions">
+            <button id="generate-mail">Generate Email (preview)</button>
+            <button id="copy-mail">Copy email to clipboard</button>
+            <a id="mailto-link" href="#" class="mailto-link" target="_blank" rel="noopener">Open mail client</a>
+          </div>
+
+          <h4>Email preview (editable)</h4>
+          <textarea id="email-preview" class="email-preview" rows="8"></textarea>
+
+          <div class="lead-time">Lead time: up to a month</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEGAL (anchor: actual page is ./legal.html) -->
+    <section id="legal" class="section glass" data-title="Legal">
+      <h2 class="section-title">Legal</h2>
+      <p class="lead small">View full terms, warranty, and other legal info.</p>
+      <a class="legal-btn" href="./legal.html">Open Legal</a>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <img src="sam.png" alt="sample" class="footer-sample" />
+    <div>© Penncamm — handmade, built to last.</div>
+  </footer>
+
+  <!-- JS in HTML (as requested) -->
   <script>
-  // SCROLL HEADER HIGHLIGHT
-  const sections = document.querySelectorAll('.section');
-  const navLinks = document.querySelectorAll('nav a');
-  window.addEventListener('scroll', () => {
-    let current = "";
-    sections.forEach(sec => {
-      const top = window.scrollY;
-      const offset = sec.offsetTop - 150;
-      const height = sec.offsetHeight;
-      if (top >= offset && top < offset + height) current = sec.getAttribute('id');
-    });
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href').includes(current)) link.classList.add('active');
-    });
-  });
+    /* ========= configuration =========
+       - options.json is loaded to populate the lists
+       - selected items tracked and total calculated
+       - creates a mailto link and editable preview
+    ==================================*/
 
-  // LOAD OPTIONS
-  fetch('options.json').then(r => r.json()).then(data => {
-    const container = document.getElementById('configurator');
-    for (let category in data) {
-      const catDiv = document.createElement('div');
-      catDiv.className = 'category';
+    const PARTS_PRICE = 15;
+    const LABOR_PRICE = 40;
+    const CONTACT_EMAIL = 'cam@pennbrenn.com';
 
-      const header = document.createElement('button');
-      header.className = 'category-header';
-      header.textContent = category;
-      header.onclick = () => catDiv.classList.toggle('open');
-      catDiv.appendChild(header);
-
-      const opts = document.createElement('div');
-      opts.className = 'category-options';
-      data[category].forEach(opt => {
-        const label = document.createElement('label');
-        const input = document.createElement(opt.multi ? 'checkbox' : 'radio');
-        input.type = opt.multi ? 'checkbox' : 'radio';
-        input.name = category;
-        input.value = opt.name;
-        label.appendChild(input);
-        label.append(` ${opt.name} ($${opt.price})`);
-        opts.appendChild(label);
-      });
-      catDiv.appendChild(opts);
-      container.appendChild(catDiv);
+    async function loadOptions() {
+      try {
+        const resp = await fetch('options.json');
+        if (!resp.ok) throw new Error('Failed to load options.json');
+        const data = await resp.json();
+        populateOptionList('wrap-list', data.wrap || []);
+        populateOptionList('accent-list', data.accent || []);
+        populateOptionList('case-list', data.case || []);
+        populateOptionList('storage-list', data.storage || []);
+        populateOptionList('lens-list', data.lens || [], true);
+        populateOptionList('charger-list', data.charger || []);
+        populateOptionList('battery-list', data.battery || []);
+        // set parts/labor display if provided in json
+        if (data.parts_price) { /* not essential - using constants above */ }
+      } catch (err) {
+        console.error(err);
+        document.getElementById('wrap-list').innerText = 'Error loading options';
+      }
     }
-  });
 
-  function copyEmail() {
-    const text = document.getElementById('emailPreview').textContent;
-    navigator.clipboard.writeText(text);
-    alert('Email copied! Send to cam@pennbrenn.com');
-  }
+    function populateOptionList(containerId, items, allowMultiple=false) {
+      const container = document.getElementById(containerId);
+      container.innerHTML = '';
+      items.forEach((it, idx) => {
+        const id = containerId + '-item-' + idx;
+        const row = document.createElement('label');
+        row.className = 'option-row';
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.name = containerId;
+        checkbox.value = it.name;
+        checkbox.dataset.price = Number(it.price || 0);
+        checkbox.id = id;
+        checkbox.addEventListener('change', updateSelection);
+        const spanLabel = document.createElement('span');
+        spanLabel.className = 'opt-label';
+        spanLabel.textContent = it.name;
+        const spanPrice = document.createElement('span');
+        spanPrice.className = 'opt-price';
+        spanPrice.textContent = `$${(Number(it.price||0)).toFixed(2)}`;
+        row.appendChild(checkbox);
+        row.appendChild(spanLabel);
+        row.appendChild(spanPrice);
+        container.appendChild(row);
+      });
+
+      // if single-choice group (not lens), make it select-only (allow only one)
+      if (!allowMultiple) {
+        container.addEventListener('change', (e) => {
+          if (!e.target.matches('input[type="checkbox"]')) return;
+          // uncheck others if one checked
+          if (e.target.checked) {
+            const inputs = container.querySelectorAll('input[type="checkbox"]');
+            inputs.forEach(i => { if (i !== e.target) i.checked = false; });
+          }
+          updateSelection();
+        });
+      }
+    }
+
+    function updateSelection() {
+      const selectedList = document.getElementById('selected-list');
+      selectedList.innerHTML = '';
+      let total = 0;
+
+      const optionContainers = ['wrap-list','accent-list','case-list','storage-list','lens-list','charger-list','battery-list'];
+      optionContainers.forEach(cid => {
+        const inputs = document.querySelectorAll('#' + cid + ' input[type="checkbox"]');
+        inputs.forEach(i => {
+          if (i.checked) {
+            const itemRow = document.createElement('div');
+            itemRow.className = 'selected-item';
+            itemRow.textContent = i.value + ' ';
+            const priceEl = document.createElement('span');
+            priceEl.className = 'sel-price';
+            const p = Number(i.dataset.price || 0);
+            priceEl.textContent = `$${p.toFixed(2)}`;
+            itemRow.appendChild(priceEl);
+            selectedList.appendChild(itemRow);
+            total += p;
+          }
+        });
+      });
+
+      // add parts & labor
+      total += PARTS_PRICE + LABOR_PRICE;
+
+      document.getElementById('total-amount').textContent = `$${total.toFixed(2)}`;
+    }
+
+    function buildEmailPreview() {
+      const name = document.getElementById('cust-name').value || '[Name]';
+      const email = document.getElementById('cust-email').value || '[Email]';
+      const phone = document.getElementById('cust-phone').value || '[Phone]';
+      const notes = document.getElementById('notes').value || '';
+      const total = document.getElementById('total-amount').textContent || '$0.00';
+
+      let body = `Hello,\n\nI'd like a custom quote for a Penncamm camera. Below are my details:\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nSelected options:\n`;
+
+      const optionContainers = ['wrap-list','accent-list','case-list','storage-list','lens-list','charger-list','battery-list'];
+      optionContainers.forEach(cid => {
+        const inputs = document.querySelectorAll('#' + cid + ' input[type="checkbox"]');
+        const chosen = [];
+        inputs.forEach(i => { if (i.checked) chosen.push(`${i.value} ($${Number(i.dataset.price||0).toFixed(2)})`); });
+        if (chosen.length) {
+          body += `\n${cid.replace('-list','')}: ${chosen.join(', ')}`;
+        }
+      });
+
+      body += `\n\nParts: $${PARTS_PRICE.toFixed(2)}\nLabor: $${LABOR_PRICE.toFixed(2)}\n\nEstimated total: ${total}\n\nLead time: up to a month\n\nNotes / Questions:\n${notes}\n\nThank you,\n${name}\n`;
+      document.getElementById('email-preview').value = body;
+      return {subject: `Penncamm estimate request from ${name}`, body};
+    }
+
+    function createMailtoLink() {
+      const preview = buildEmailPreview();
+      const bodyEnc = encodeURIComponent(preview.body);
+      const subjectEnc = encodeURIComponent(preview.subject);
+      const mailto = `mailto:${CONTACT_EMAIL}?subject=${subjectEnc}&body=${bodyEnc}`;
+      const link = document.getElementById('mailto-link');
+      link.href = mailto;
+      return mailto;
+    }
+
+    document.getElementById('generate-mail').addEventListener('click', (e) => {
+      e.preventDefault();
+      createMailtoLink();
+      alert('Email preview generated below. Use "Open mail client" to start an email or copy the preview to clipboard.');
+    });
+
+    document.getElementById('copy-mail').addEventListener('click', async (e) => {
+      e.preventDefault();
+      const txt = document.getElementById('email-preview').value || buildEmailPreview().body;
+      try {
+        await navigator.clipboard.writeText(txt);
+        alert('Email preview copied to clipboard.');
+      } catch (err) {
+        alert('Unable to copy automatically — please select and copy manually.');
+      }
+    });
+
+    // update mailto when email preview edited
+    document.getElementById('email-preview').addEventListener('input', () => {
+      const subject = 'Penncamm estimate request';
+      const body = document.getElementById('email-preview').value || '';
+      document.getElementById('mailto-link').href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    });
+
+    // Scrollspy / active header highlight
+    function initScrollSpy() {
+      const sections = document.querySelectorAll('main .section');
+      const navlinks = document.querySelectorAll('.nav-link');
+      const options = { root: null, rootMargin: '0px', threshold: 0.5 };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.id;
+            navlinks.forEach(a => {
+              if (a.dataset.target === id) {
+                a.classList.add('active');
+              } else {
+                a.classList.remove('active');
+              }
+            });
+          }
+        });
+      }, options);
+
+      sections.forEach(s => observer.observe(s));
+
+      // smooth scroll for nav
+      navlinks.forEach(a => {
+        a.addEventListener('click', (e) => {
+          e.preventDefault();
+          const t = document.getElementById(a.dataset.target);
+          t.scrollIntoView({behavior:'smooth',block:'start'});
+        });
+      });
+    }
+
+    // Keep header following - sticky CSS used. Also shrink on scroll.
+    function initHeaderShrink() {
+      const header = document.getElementById('site-header');
+      const hero = document.getElementById('home');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 40) header.classList.add('header-small');
+        else header.classList.remove('header-small');
+      });
+    }
+
+    // initial load
+    window.addEventListener('load', () => {
+      loadOptions().then(() => {
+        updateSelection();
+      });
+      initScrollSpy();
+      initHeaderShrink();
+    });
   </script>
 </body>
 </html>
