@@ -18,7 +18,7 @@
   <!--bg color-->
     <style>
     :root{
-      --color-a: #000000;
+      --color-a: #090e12;
       --color-b: #465e73;
     }
 
@@ -58,7 +58,7 @@
   </style>
   <style>
     :root {
-      --color-a: #000000;
+      --color-a: #090e12;
       --color-b: #465e73;
     }
 
@@ -269,7 +269,7 @@
     const obsOptions = {
       root: null,
       rootMargin: `-${headerHeight}px 0px 0px 0px`,
-      threshold: 0.5
+      threshold: 0.1 // yay its fixt 
     };
 
     const sectionObserver = new IntersectionObserver((entries) => {
@@ -323,7 +323,7 @@
         return;
       }
 
-      // Build UI for categories
+      // Build UI for categories aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa fix it pls
       optionsContainer.innerHTML = '';
       Object.keys(OPTIONS).forEach(cat => {
         const box = document.createElement('div');
@@ -534,6 +534,7 @@
   </script>
 </body>
 </html>
+
 
 
 
