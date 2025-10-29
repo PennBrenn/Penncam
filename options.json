@@ -103,7 +103,7 @@
     {"name":"Color fade","price":4},
     {"name":"Clear","price":4}
     {"name":"Gold","price":1000},
-    {"name":"Uranium","price":999999999},
+    {"name":"Uranium","price":999999999}
   ],
   "Storage": [
     {"name":"None","price":0},
@@ -121,7 +121,7 @@
   ],
   "Charger": [
     {"name":"None (Use own)","price":0},
-    {"name":"USBC to USBC","price":6}
+    {"name":"USBC to USBC","price":6},
     {"name":"USBC to USBA","price":3}
   ],
   "Battery": [
@@ -129,4 +129,5 @@
     {"name":"350mah (>2h)","price":3}
   ]
 }
+
 
