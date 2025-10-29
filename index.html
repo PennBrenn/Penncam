@@ -7,7 +7,7 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-VV5DY5JBSZ');
+    gtag('config', 'G-VV5DY5JBSZ'); // if you read this you like dick :3
   </script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -27,13 +27,11 @@
       margin: 0;
     }
 
-    /* Keyframes from black to target color */
+    /* no touch pleas */
     @keyframes bgColorShift {
       from { background-color: var(--color-a); }
       to   { background-color: var(--color-b); }
     }
-
-    /* --- Default: 10s to go from A → B, then 10s back (alternate ping-pong) --- */
     body{
       min-height: 100vh;
       display: grid;
@@ -43,15 +41,6 @@
       animation: bgColorShift 10s linear infinite alternate;
     }
 
-    /* If you prefer a one-way 10s animation that instantly jumps back and repeats,
-       replace the body rule above with this:
-    body {
-      animation: bgColorShift 10s steps(1,end) infinite;
-    }
-    (Uncomment and use that instead — but the ping-pong version looks smoother.)
-    */
-
-    /* Respect user motion preferences */
     @media (prefers-reduced-motion: reduce) {
       body { animation: none; background-color: var(--color-a); }
     }
@@ -80,7 +69,6 @@
       to   { background-color: var(--color-b); }
     }
 
-    /* Optional: Respect reduced motion */
     @media (prefers-reduced-motion: reduce) {
       html { animation: none; background-color: var(--color-a); }
     }
@@ -95,7 +83,7 @@
 </head>
 <body>
 
-  <!-- Sticky header -->
+  <!-- header -->
   <header id="site-header" class="site-header">
     <div class="header-left">Penncamm</div>
     <nav class="header-nav" id="nav">
@@ -112,9 +100,8 @@
     </div>
   </header>
 
-  <!-- Provide spacing so header doesn't block top title -->
+  <!-- the space to stop title breaking again -->
   <main id="main">
-    <!-- Hero / Home -->
     <section id="home" class="panel hero">
       <div class="glass">
         <h1 class="title">Penncamm</h1>
@@ -123,7 +110,7 @@
       </div>
     </section>
 
-    <!-- Samples -->
+    <!-- foto -->
     <section id="samples" class="panel samples">
       <div class="glass">
         <h2 class="section-title">Sample Photos — Lenses</h2>
@@ -148,7 +135,7 @@
       </div>
     </section>
 
-    <!-- Features -->
+    <!-- the section with the feaures -->
     <section id="features" class="panel features">
       <div class="glass">
         <h2 class="section-title">Features</h2>
@@ -179,7 +166,7 @@
       </div>
     </section>
 
-    <!-- About -->
+    <!-- Abt -->
     <section id="about" class="panel about">
       <div class="glass">
         <h2 class="section-title">About</h2>
@@ -190,7 +177,7 @@
       </div>
     </section>
 
-    <!-- Buy / Estimate -->
+    <!-- Buy -->
     <section id="buy" class="panel buy">
       <div class="glass">
         <h2 id="thankyou" class="section-title">Get an Estimate</h2>
@@ -208,7 +195,7 @@
           </div>
 
           <div id="options-container" class="options-container">
-            <!-- Options appear here after options.json is loaded -->
+            <!-- Options after json loaded -->
             <p class="muted">Loading options…</p>
           </div>
 
@@ -238,7 +225,6 @@
       </div>
     </section>
 
-    <!-- Legal -->
     <section id="legal" class="panel legal">
       <div class="glass">
         <h2 class="section-title">Legal</h2>
@@ -256,16 +242,13 @@
   </main>
 
   <script>
-    /***************
-     * Helper & UI
-     ***************/
+
     const header = document.getElementById('site-header');
     const navItems = Array.from(document.querySelectorAll('.nav-item'));
     const sections = Array.from(document.querySelectorAll('section.panel'));
     const headerHeight = header.offsetHeight;
 
-    // make header follow user: we use position: fixed in CSS
-    // IntersectionObserver to update active nav item
+    // make header follow user
     const obsOptions = {
       root: null,
       rootMargin: `-${headerHeight}px 0px 0px 0px`,
@@ -286,7 +269,7 @@
     sections.forEach(s => sectionObserver.observe(s));
 
 
-    // Smooth scroll for nav
+    // Smooth scroll
     document.querySelectorAll('.nav-item').forEach(a => {
       a.addEventListener('click', (e) => {
         e.preventDefault();
@@ -296,9 +279,7 @@
       });
     });
 
-    /****************
-     * Load options.json and render selects
-     ****************/
+    /* json optopnts*/
     const optionsContainer = document.getElementById('options-container');
     let OPTIONS = null;
     let selected = {
@@ -323,7 +304,7 @@
         return;
       }
 
-      // Build UI for categories aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa fix it pls
+      // cats w box highlight
       optionsContainer.innerHTML = '';
       Object.keys(OPTIONS).forEach(cat => {
         const box = document.createElement('div');
@@ -332,7 +313,7 @@
         title.textContent = cat;
         box.appendChild(title);
 
-        // For Lens, use multi-select checkboxes with select-all
+// multiselect
         if (cat === 'Lens') {
           const selectAll = document.createElement('button');
           selectAll.type = 'button';
@@ -371,7 +352,7 @@
           });
 
         } else {
-          // For other categories use scrollable single-select list styled to look like dropdown
+          // dropdown
           const sel = document.createElement('div');
           sel.className = 'option-list single';
           OPTIONS[cat].forEach(opt => {
@@ -383,7 +364,6 @@
             rb.dataset.cat = cat;
             rb.value = opt.name;
             rb.dataset.price = opt.price;
-            // For storage we allow None as an option
             const name = document.createElement('span');
             name.className = 'opt-name';
             name.textContent = opt.name;
@@ -401,13 +381,12 @@
         optionsContainer.appendChild(box);
       });
 
-      // Bind change listeners
       optionsContainer.addEventListener('change', updateSelection);
       document.getElementById('generate').addEventListener('click', generateEmail);
       document.getElementById('copy').addEventListener('click', copyEmailText);
       document.getElementById('mailto-link').addEventListener('click', openMailClient);
 
-      // initial total
+
       updateSelection();
     }
 
@@ -436,7 +415,7 @@
         }
       });
 
-      // compute total: base parts+labor + selected item prices
+      // PRICE<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
       const parts = 15;
       const labor = 40;
       let total = parts + labor;
@@ -444,10 +423,10 @@
         selected[cat].forEach(it => total += (Number(it.price) || 0));
       });
 
-      // Update total display and show selected items with price
+      // update button
       document.getElementById('total-value').textContent = money(total);
 
-      // Build email preview
+      // vuild preview
       buildEmailPreview(total);
     }
 
@@ -497,7 +476,7 @@
       const emailText = lines.join('\n');
       document.getElementById('email-preview').value = emailText;
 
-      // update mailto link
+    
       const subject = encodeURIComponent('Penncamm custom quote request');
       const body = encodeURIComponent(emailText);
       const mailto = `mailto:cam@pennbrenn.com?subject=${subject}&body=${body}`;
@@ -506,7 +485,6 @@
     }
 
     function generateEmail() {
-      // ensure preview is up to date
       updateSelection();
       alert('Email generated in the preview box. You can copy it or open your mail client.');
     }
@@ -524,16 +502,15 @@
     }
 
     function openMailClient(e) {
-      // mailto link will open mail client
-      // let default action proceed
     }
 
-    // load options on ready
+    // load on ready
     window.addEventListener('load', loadOptions);
 
   </script>
 </body>
 </html>
+
 
 
 
