@@ -127,8 +127,15 @@
   "Battery": [
     {"name":"2000mah (>10h)","price":12},
     {"name":"350mah (>2h)","price":3}
+  ],
+  "Mounts": [
+    {"name":"Gimbal","price":50},
+    {"name":"Tripod","price":20},
+    {"name":"Chest","price":20},
+    {"name":"Helmet","price":20}
   ]
 }
+
 
 
 
