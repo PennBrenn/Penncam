@@ -319,7 +319,7 @@
         OPTIONS = await res.json();
       } catch (err) {
         console.error('Could not load options.json', err);
-        optionsContainer.innerHTML = '<p class="error">Could not load options.json — make sure it is present next to the HTML file.</p>';
+        optionsContainer.innerHTML = '<p class="error">ERROR: Option file not found | Contact me if this persists</p>';
         return;
       }
 
@@ -534,6 +534,7 @@
   </script>
 </body>
 </html>
+
 
 
 
