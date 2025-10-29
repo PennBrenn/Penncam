@@ -77,7 +77,7 @@
     {"name":"Clear Silicone","price":2},
     {"name":"Carbon Fiber","price":10},
     {"name":"Fiberglass","price":8},
-    {"name":"reflective","price":8}
+    {"name":"Reflective","price":8}
   ],
   "Case": [
     {"name":"Steel","price":8},
@@ -103,7 +103,7 @@
     {"name":"Color fade","price":4},
     {"name":"Clear","price":4},
     {"name":"Gold","price":1000},
-    {"name":"Uranium","price":999999999}
+    {"name":"Dick in my ass","price":99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999}
   ],
   "Storage": [
     {"name":"None","price":0},
@@ -135,6 +135,7 @@
     {"name":"Helmet","price":20}
   ]
 }
+
 
 
 
