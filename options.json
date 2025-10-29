@@ -101,7 +101,7 @@
     {"name":"Pink Plastic","price":4},
     {"name":"Brown Plastic","price":4},
     {"name":"Color fade","price":4},
-    {"name":"Clear","price":4}
+    {"name":"Clear","price":4},
     {"name":"Gold","price":1000},
     {"name":"Uranium","price":999999999}
   ],
@@ -129,5 +129,6 @@
     {"name":"350mah (>2h)","price":3}
   ]
 }
+
 
 
