@@ -103,7 +103,7 @@
     {"name":"Color fade","price":4},
     {"name":"Clear","price":4},
     {"name":"Gold","price":1000},
-    {"name":"Dick in my ass","price":99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999}
+    {"name":"Uranium","price":6700}
   ],
   "Storage": [
     {"name":"None","price":0},
@@ -132,9 +132,11 @@
     {"name":"Gimbal","price":50},
     {"name":"Tripod","price":20},
     {"name":"Chest","price":20},
+    {"nam":"Suction","price"20},
     {"name":"Helmet","price":20}
   ]
 }
+
 
 
 
