@@ -132,10 +132,11 @@
     {"name":"Gimbal","price":50},
     {"name":"Tripod","price":20},
     {"name":"Chest","price":20},
-    {"name":"Suction","price"20},
+    {"name":"Suction","price":20},
     {"name":"Helmet","price":20}
   ]
 }
+
 
 
 
